@@ -1,0 +1,12 @@
+# Generated lab workspaces and learner output
+01-incident/work/
+02-backup-deployment/work/
+03-users-permissions/work/
+04-system-network/work/
+05-scripting/work/
+06-capstone/work/
+
+# Common editor/temp files
+*~
+*.swp
+.DS_Store
