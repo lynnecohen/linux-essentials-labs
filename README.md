@@ -2,6 +2,32 @@
 
 Hands-on practice environment for **LPI Linux Essentials 010-160 / WGU D281**.
 
+## Quick start
+
+Clone the repository to the Debian server, then from the repository root run:
+
+```bash
+bash setup.sh
+```
+
+Lab 1 instructions are in:
+
+```text
+01-incident/README.md
+```
+
+When you finish the scored tasks, run:
+
+```bash
+bash check.sh 1
+```
+
+To rebuild Lab 1 from scratch:
+
+```bash
+bash reset.sh 1
+```
+
 ## Study strategy
 
 This repository is intentionally optimized for high-ROI exam preparation rather than exhaustive Linux administration. Basic navigation and file-management skills are assumed; labs concentrate on commands, flags, and distinctions that still need deliberate practice.
@@ -22,6 +48,8 @@ Required lab work is gated to the current **Linux Essentials v1.6 / 010-160** ob
 ## Repository workflow
 
 Labs are built incrementally. After each lab, later labs may be adjusted based on what becomes fluent and what still needs repetition. The capstone remains intentionally unrevealed until the prerequisite labs are complete.
+
+Use `PROGRESS.md` as a lightweight checkpoint after a lab so later exercises can be tuned around what was automatic versus what still required recall support.
 
 ## Safety
 
