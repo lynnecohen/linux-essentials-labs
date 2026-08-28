@@ -1,0 +1,4 @@
+2026-08-26 23:54:10 INFO nightly job started
+2026-08-26 23:54:15 WARN sync delay=900ms
+2026-08-26 23:54:20 ERROR sync failed reason="database timeout"
+2026-08-26 23:54:21 INFO retrying sync
