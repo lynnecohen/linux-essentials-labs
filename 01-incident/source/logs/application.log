@@ -1,0 +1,16 @@
+2026-08-27 07:59:55 INFO portal starting release=2026.08.27
+2026-08-27 08:00:02 DEBUG cache warmup complete
+2026-08-27 08:00:10 INFO login accepted user=alice
+2026-08-27 08:00:17 WARN progress service latency=410ms
+2026-08-27 08:00:24 ERROR profile lookup failed user=carol reason="permission denied"
+2026-08-27 08:00:25 DEBUG retry scheduled user=carol
+2026-08-27 08:00:30 Error dashboard render failed user=dave reason="template timeout"
+2026-08-27 08:00:31 DEBUG template retry user=dave
+2026-08-27 08:00:36 ERROR progress API failed user=erin reason="upstream timeout"
+2026-08-27 08:00:37 INFO retrying progress API
+2026-08-27 08:00:39 error progress API failed user=frank reason="upstream TIMEOUT"
+2026-08-27 08:00:40 DEBUG error counter reset after retry
+2026-08-27 08:00:45 INFO help page missing asset=/help/banner.png
+2026-08-27 08:00:51 ERROR progress API failed user=grace reason="connection reset"
+2026-08-27 08:00:55 INFO recovery check started
+2026-08-27 08:00:56 DEBUG health probe=ok
