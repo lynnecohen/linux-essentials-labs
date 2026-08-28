@@ -1,0 +1,7 @@
+2026-08-27 07:58:10 INFO ssh login user=admin source=198.51.100.10
+2026-08-27 07:59:04 INFO sudo session user=admin command=deploy
+2026-08-27 08:00:23 WARN app auth failure user=carol reason="permission denied"
+2026-08-27 08:00:29 WARN app auth failure user=dave reason="token expired"
+2026-08-27 08:00:35 INFO app auth success user=erin
+2026-08-27 08:00:38 WARN app auth failure user=frank reason="token timeout"
+2026-08-27 08:00:50 INFO app auth success user=grace
