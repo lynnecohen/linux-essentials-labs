@@ -4,28 +4,34 @@ Hands-on practice environment for **LPI Linux Essentials 010-160 / WGU D281**.
 
 ## Quick start
 
-Clone the repository to the Debian server, then from the repository root run:
+Clone the repository to the Debian server, then from the repository root set up the lab you want:
 
 ```bash
-bash setup.sh
+bash setup.sh 1
+bash setup.sh 2
 ```
 
-Lab 1 instructions are in:
+Current built labs:
 
 ```text
-01-incident/README.md
+01-incident/           Lab 1 — Production Incident Investigation
+02-backup-deployment/ Lab 2 — Backup, Restore & Deployment
 ```
 
-When you finish the scored tasks, run:
+Each built lab contains a `READING.md` pre-reading and a `README.md` practical exercise.
+
+When you finish the scored tasks, run the checker from the repository root:
 
 ```bash
 bash check.sh 1
+bash check.sh 2
 ```
 
-To rebuild Lab 1 from scratch:
+To rebuild a lab from scratch:
 
 ```bash
 bash reset.sh 1
+bash reset.sh 2
 ```
 
 ## Study strategy
@@ -43,7 +49,7 @@ The working sequence is:
 
 ## Scope rule
 
-Required lab work is gated to the current **Linux Essentials v1.6 / 010-160** objectives, with a small amount of instructor-emphasized syntax reinforcement where it has high exam value. Useful but lower-ROI Linux administration topics belong in the post-WGU `learn-later/` track rather than the required exam labs.
+Required lab work is gated to **Linux Essentials v1.6 / 010-160** scope, with a small amount of instructor-emphasized syntax reinforcement where it has high exam value. Useful but lower-ROI Linux administration topics belong in the post-WGU `learn-later/` track rather than the required exam labs.
 
 ## Repository workflow
 
