@@ -35,12 +35,7 @@ if ((${#missing[@]} > 0)); then
     exit 1
 fi
 
-chmod +x "$ROOT_DIR/reset.sh" "$ROOT_DIR/cleanup.sh" "$ROOT_DIR/check.sh"
-if [[ -f "$ROOT_DIR/$LAB_DIR/check.sh" ]]; then
-    chmod +x "$ROOT_DIR/$LAB_DIR/check.sh"
-fi
-
-"$ROOT_DIR/reset.sh" "$LAB_NUMBER"
+bash "$ROOT_DIR/reset.sh" "$LAB_NUMBER"
 
 echo
 echo "Setup complete for Lab $LAB_NUMBER."
