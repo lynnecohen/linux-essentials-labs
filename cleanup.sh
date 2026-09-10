@@ -9,8 +9,12 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/01-incident/work"
         echo "Lab 1 generated workspace removed."
         ;;
+    2|02|backup|deployment)
+        rm -rf "$ROOT_DIR/02-backup-deployment/work"
+        echo "Lab 2 generated workspace removed."
+        ;;
     *)
-        echo "Only Lab 1 is built right now."
+        echo "Built labs: 1 and 2."
         exit 1
         ;;
 esac
