@@ -16,6 +16,20 @@ This lab assumes you already know basic navigation, copying, moving, directory c
 - pipelines and redirection: `|`, `>`, `>>`, `2>`, `<`
 - quoting, case sensitivity, and shell-glob versus text-pattern distinctions
 
+## Before you begin — pre-reading
+
+Read **[Lab 1 Pre-Reading — Searching and Processing Text](READING.md)** before starting the practical tasks.
+
+The reading covers the syntax and mental models used in this lab, including:
+
+- interactive searching and navigation inside `less`
+- `grep` flags and recursive searching
+- shell globbing versus regular expressions, including how `*`, `?`, `.`, character classes, quoting, and regex anchors behave differently
+- `cut`, `wc`, pipes, sorting, and redirection
+- stdin, stdout, and stderr
+
+The reading intentionally teaches the tools without giving the required Lab 1 artifact commands. Use the lab afterward to reinforce retrieval and combination of those tools.
+
 ## Setup
 
 From the repository root, run:
