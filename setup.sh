@@ -13,7 +13,7 @@ case "$LAB" in
     2|02|backup|deployment)
         LAB_NUMBER=2
         LAB_DIR="02-backup-deployment"
-        required_commands=(tar gzip gunzip bzip2 bunzip2 xz unxz ln readlink diff cat)
+        required_commands=(tar gzip bzip2 xz ln readlink diff cat)
         ;;
     *)
         echo "Built labs: 1 and 2."
