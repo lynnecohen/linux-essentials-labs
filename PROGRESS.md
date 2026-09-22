@@ -32,36 +32,65 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 
 ## Lab 2 — Backup, Restore & Deployment
 
+**Completed:** Yes
+
+**Tar combinations that were recalled correctly:**
+
+- `tar -czf` — create gzip-compressed tar archive
+- `tar -tzf` — list gzip-compressed tar archive
+- `tar -xzf` — extract gzip-compressed tar archive
+- `c`, `x`, and `t` mode distinctions
+- `f` as the archive-filename indicator
+- `z` = gzip, `j` = bzip2, `J` = xz
+- `v` = verbose
+- plain `.tar` versus compressed `.tar.gz`
+
+**Symbolic-link concepts retained:**
+
+- `ln -s TARGET LINK_NAME`
+- relative targets are resolved relative to the link's containing directory
+- deleting a symbolic link does not delete its target
+
+**Items clarified during the lab:**
+
+- verbose tar listings add metadata rather than changing the archive operation
+- standalone `gzip` / `gunzip` behavior
+- ZIP creation needs both an archive filename and input file(s); `unzip archive.zip` extracts
+
+**Exact-recall result:** All major Lab 2 targets were correct; only ZIP creation syntax needed tightening.
+
+**Plan adjustment:** Treat tar create/list/extract and `z/j/J/f` as retained skills. Reuse archive syntax incidentally later rather than dedicating another lab to it.
+
+---
+
+## Lab 3 — Users, Sessions & Permissions
+
 **Completed:**
 
-**Tar combinations that felt automatic:**
+**Permission syntax that felt automatic:**
 
-- 
+-
 
-**Tar flags/combinations I had to look up or ask about:**
+**Permission syntax I had to look up or ask about:**
 
-- 
+-
 
-**Things I got wrong at least once:**
+**Was `who` versus `w` versus `last` automatic?**
 
-- 
+-
 
-**Was `j` versus `J` automatic?**
+**Was `id` versus `whoami` automatic?**
 
-- 
+-
 
-**Was `c` versus `x` versus `t` automatic?**
+**Account-file mapping (`passwd` / `shadow` / `group`) that caused hesitation:**
 
-- 
+-
 
-**Symbolic-link behavior or syntax that caused hesitation:**
+**Sticky-bit or `/tmp` versus `/var/tmp` questions:**
 
-- 
-
-**Anything that felt unnecessarily easy or repetitive:**
-
-- 
+-
 
 **Anything I want repeated in a later lab:**
 
-- 
+-
