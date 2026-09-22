@@ -11,8 +11,11 @@ case "$LAB" in
     2|02|backup|deployment)
         exec bash "$ROOT_DIR/02-backup-deployment/check.sh"
         ;;
+    3|03|users|permissions)
+        exec bash "$ROOT_DIR/03-users-permissions/check.sh"
+        ;;
     *)
-        echo "Built labs: 1 and 2."
+        echo "Built labs: 1, 2, and 3."
         exit 1
         ;;
 esac
