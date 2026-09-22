@@ -13,8 +13,12 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/02-backup-deployment/work"
         echo "Lab 2 generated workspace removed."
         ;;
+    3|03|users|permissions)
+        rm -rf "$ROOT_DIR/03-users-permissions/work"
+        echo "Lab 3 generated workspace removed."
+        ;;
     *)
-        echo "Built labs: 1 and 2."
+        echo "Built labs: 1, 2, and 3."
         exit 1
         ;;
 esac
