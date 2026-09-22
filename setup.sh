@@ -15,9 +15,14 @@ case "$LAB" in
         LAB_DIR="02-backup-deployment"
         required_commands=(tar gzip bzip2 xz ln readlink diff cat)
         ;;
+    3|03|users|permissions)
+        LAB_NUMBER=3
+        LAB_DIR="03-users-permissions"
+        required_commands=(chmod ls id who w last cat less grep head stat)
+        ;;
     *)
-        echo "Built labs: 1 and 2."
-        echo "Usage: bash setup.sh 1|2"
+        echo "Built labs: 1, 2, and 3."
+        echo "Usage: bash setup.sh 1|2|3"
         exit 1
         ;;
 esac
