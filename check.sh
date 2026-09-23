@@ -14,8 +14,11 @@ case "$LAB" in
     3|03|users|permissions)
         exec bash "$ROOT_DIR/03-users-permissions/check.sh"
         ;;
+    4|04|system|network)
+        exec bash "$ROOT_DIR/04-system-network/check.sh"
+        ;;
     *)
-        echo "Built labs: 1, 2, and 3."
+        echo "Built labs: 1, 2, 3, and 4."
         exit 1
         ;;
 esac
