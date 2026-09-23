@@ -44,8 +44,17 @@ case "$LAB" in
 
         echo "Lab 3 reset to its starting state."
         ;;
+    4|04|system|network)
+        WORK="$ROOT_DIR/04-system-network/work"
+        SOURCE="$ROOT_DIR/04-system-network/source"
+        rm -rf "$WORK"
+        mkdir -p "$WORK"
+        cp -a "$SOURCE/." "$WORK/"
+        mkdir -p "$WORK/results"
+        echo "Lab 4 reset to its starting state."
+        ;;
     *)
-        echo "Built labs: 1, 2, and 3."
+        echo "Built labs: 1, 2, 3, and 4."
         exit 1
         ;;
 esac
