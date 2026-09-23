@@ -17,8 +17,12 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/03-users-permissions/work"
         echo "Lab 3 generated workspace removed."
         ;;
+    4|04|system|network)
+        rm -rf "$ROOT_DIR/04-system-network/work"
+        echo "Lab 4 generated workspace removed."
+        ;;
     *)
-        echo "Built labs: 1, 2, and 3."
+        echo "Built labs: 1, 2, 3, and 4."
         exit 1
         ;;
 esac
