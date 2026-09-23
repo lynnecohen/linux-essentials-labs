@@ -20,9 +20,14 @@ case "$LAB" in
         LAB_DIR="03-users-permissions"
         required_commands=(chmod ls id who w last cat less grep head stat)
         ;;
+    4|04|system|network)
+        LAB_NUMBER=4
+        LAB_DIR="04-system-network"
+        required_commands=(ps top free dmesg ip ss ping cat ls head grep)
+        ;;
     *)
-        echo "Built labs: 1, 2, and 3."
-        echo "Usage: bash setup.sh 1|2|3"
+        echo "Built labs: 1, 2, 3, and 4."
+        echo "Usage: bash setup.sh 1|2|3|4"
         exit 1
         ;;
 esac
@@ -47,3 +52,9 @@ echo "Setup complete for Lab $LAB_NUMBER."
 echo "Start with:   cd \"$ROOT_DIR/$LAB_DIR/work\""
 echo "Reading:      $ROOT_DIR/$LAB_DIR/READING.md"
 echo "Instructions: $ROOT_DIR/$LAB_DIR/README.md"
+
+if [[ "$LAB_NUMBER" == "4" ]] && ! command -v host >/dev/null 2>&1; then
+    echo
+    echo "Note: 'host' is not installed on this system."
+    echo "Lab 4 treats the DNS lookup exercise as environment-dependent; do not install extra software solely for the lab."
+fi
