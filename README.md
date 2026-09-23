@@ -10,6 +10,7 @@ Clone the repository to the Debian server, then from the repository root set up 
 bash setup.sh 1
 bash setup.sh 2
 bash setup.sh 3
+bash setup.sh 4
 ```
 
 Current built labs:
@@ -18,6 +19,7 @@ Current built labs:
 01-incident/           Lab 1 — Production Incident Investigation
 02-backup-deployment/ Lab 2 — Backup, Restore & Deployment
 03-users-permissions/ Lab 3 — Users, Sessions & Permissions
+04-system-network/    Lab 4 — System & Network Inspection
 ```
 
 Each built lab contains a `READING.md` pre-reading and a `README.md` practical exercise.
@@ -28,6 +30,7 @@ When you finish the scored tasks, run the checker from the repository root:
 bash check.sh 1
 bash check.sh 2
 bash check.sh 3
+bash check.sh 4
 ```
 
 To rebuild a lab from scratch:
@@ -36,6 +39,7 @@ To rebuild a lab from scratch:
 bash reset.sh 1
 bash reset.sh 2
 bash reset.sh 3
+bash reset.sh 4
 ```
 
 ## Study strategy
