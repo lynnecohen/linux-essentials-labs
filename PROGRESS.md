@@ -65,32 +65,66 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 
 ## Lab 3 — Users, Sessions & Permissions
 
+**Completed:** Yes
+
+**Permission/account targets recalled correctly:**
+
+- numeric mode `640`
+- symbolic `chmod u+x`
+- symbolic `chmod g-w`
+- numeric permission values `r=4`, `w=2`, `x=1`
+- interpretation of owner/group/other permission triplets
+- `id` versus `whoami`
+- `/etc/passwd`, `/etc/shadow`, and `/etc/group`
+- `useradd`, `groupadd`, and `passwd`
+- `chown OWNER:GROUP FILE`
+- `/tmp` versus `/var/tmp`
+
+**Items clarified during/after the checkpoint:**
+
+- sticky bit: on a shared writable directory it restricts deletion/renaming of entries, rather than making file permissions replace directory permissions
+- `last`: historical login/session records, not specifically only SSH/command-line logins
+- `su USER` versus `su - USER`: the hyphen requests a login shell/environment for the target user
+- `sudo COMMAND`: normally runs as root by default, but sudo can be configured to run a command as another authorized user
+
+**Exact-recall result:** Strong overall. No need to repeat ordinary permission arithmetic or account-file mapping as dedicated material.
+
+**Plan adjustment:** Carry sticky-bit semantics, `who`/`w`/`last`, and login-shell distinctions forward only as incidental spaced reinforcement.
+
+---
+
+## Lab 4 — System & Network Inspection
+
 **Completed:**
 
-**Permission syntax that felt automatic:**
+**System commands that felt automatic:**
 
 -
 
-**Permission syntax I had to look up or ask about:**
+**Networking commands that felt automatic:**
 
 -
 
-**Was `who` versus `w` versus `last` automatic?**
+**Commands/paths I had to look up or ask about:**
 
 -
 
-**Was `id` versus `whoami` automatic?**
+**Was `free` versus `df` automatic?**
 
 -
 
-**Account-file mapping (`passwd` / `shadow` / `group`) that caused hesitation:**
+**Was `ip addr show` versus `ip route show` automatic?**
 
 -
 
-**Sticky-bit or `/tmp` versus `/var/tmp` questions:**
+**Was `ss` versus legacy `netstat` automatic?**
 
 -
 
-**Anything I want repeated in a later lab:**
+**Were `/etc/hosts` versus `/etc/resolv.conf` automatic?**
+
+-
+
+**Anything I want repeated in Lab 5 or the capstone:**
 
 -
