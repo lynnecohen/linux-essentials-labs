@@ -27,7 +27,7 @@ ss                  socket information
 /etc/resolv.conf    resolver/DNS configuration
 ```
 
-This lab is primarily **read-only inspection of Prometheus**. You are looking at the real system, not changing its network or process configuration.
+This lab is primarily **read-only system inspection**. The goal is to observe real system state without changing network or process configuration.
 
 ---
 
@@ -108,7 +108,14 @@ free    memory/RAM
 df      filesystem storage
 ```
 
-You already know `df -h` for disk/filesystem space. In this lab, the deliberate target is remembering that **`free` is the corresponding core command for memory information**.
+`df` and `free` answer different resource questions. `df` reports filesystem disk-space usage; `free` reports memory state, including used, free, available memory, and swap information. A useful exam-level distinction is:
+
+```text
+free    memory/RAM state
+df      filesystem disk-space usage
+```
+
+Do not read the command name `free` too literally: it is not limited to showing only unused RAM.
 
 A practical form you may see is:
 
@@ -140,7 +147,7 @@ Because the output can be long, a common inspection pattern is:
 dmesg | head
 ```
 
-Some Linux systems restrict unprivileged access to the kernel message buffer. If Prometheus returns a permission error, that does **not** mean your syntax is wrong. On a system where you have appropriate sudo access, a read-only inspection can be done with:
+Some Linux systems restrict unprivileged access to the kernel message buffer. If the command returns a permission error, that does **not** mean the syntax is wrong. On a system where you have appropriate sudo access, a read-only inspection can be done with:
 
 ```bash
 sudo dmesg | head
@@ -215,13 +222,15 @@ It exposes process and kernel information. Numeric directories such as:
 /proc/1234
 ```
 
-correspond to process IDs when those processes exist.
+correspond to process IDs when those processes exist. Other files are not tied to a single process; for example, `/proc/meminfo` exposes memory information and `/proc/cpuinfo` exposes CPU information.
 
 Memory cue:
 
 ```text
-/proc = processes + kernel information
+/proc = process + kernel runtime information
 ```
+
+A common mistake is to reduce `/proc` to only "processes." Processes are a major part of it, but `/proc` also exposes system-wide runtime data.
 
 ### `/dev` — device files
 
@@ -255,15 +264,17 @@ A useful distinction:
 
 ---
 
-## 5. Linux networking: do not reach for Windows `ipconfig`
+## 5. Linux networking: `ipconfig`, `ifconfig`, and `ip` are different
 
-On Windows you may use:
+Three similarly named commands are easy to confuse:
 
 ```text
-ipconfig /all
+ipconfig    Windows networking command
+ifconfig    older/legacy Linux/Unix interface command
+ip          modern Linux networking command family
 ```
 
-On modern Linux, the command family to remember is **`ip`**.
+On Windows, `ipconfig /all` is common. On modern Linux, the command family to remember is **`ip`**.
 
 For interface addresses:
 
@@ -374,9 +385,11 @@ dev INTERFACE   interface used to reach it
 The exam-level distinction to retain is:
 
 ```text
-ip addr show     addresses/interfaces
-ip route show    routes/default gateway
+ip addr show     What addresses are configured on this system's interfaces?
+ip route show    Where should packets be sent to reach other networks?
 ```
+
+These are related but different questions. A host can have a valid interface address while still having an incorrect or missing route, and vice versa.
 
 ---
 
@@ -404,7 +417,7 @@ You already demonstrated this syntax earlier, so Lab 4 uses it only as light rei
 
 ## 9. DNS lookup with `host`
 
-The Linux Essentials command to associate with a basic DNS lookup is:
+Several real-world tools can query DNS. For this Linux Essentials lab, the command to associate with a basic DNS lookup is:
 
 ```bash
 host example.com
@@ -415,12 +428,12 @@ The command asks the configured resolver for information about the supplied name
 For this exam plan, the key association is:
 
 ```text
-host = DNS lookup
+host = Linux Essentials DNS lookup target
 ```
 
-Do not substitute `dig` as your memorized exam answer. `dig` is useful real-world tooling, but it is deliberately outside the required v1.6 track for this project.
+`dig example.com` is also a valid real-world DNS query, but `dig` is outside the required v1.6 track for this project. When answering a Linux Essentials recall question that asks for the basic DNS lookup command covered by this lab, use `host` rather than substituting another DNS utility.
 
-Some minimal Debian installations may not have `host` installed. If Prometheus lacks it, do not treat that as a syntax failure. You can still practice exact recall, and you may try the command in **WebTerm Free Play** if that sandbox exposes `host`. Do not install extra software solely to satisfy this lab.
+Some minimal Debian installations may not have `host` installed. If it is unavailable, do not treat that as a syntax failure. Exact recall can still be practiced, and a disposable sandbox such as **WebTerm Free Play** may be used if it exposes `host`. Do not install extra software solely to satisfy this lab.
 
 ---
 
@@ -443,7 +456,7 @@ ss         modern socket inspection
 netstat    older/legacy tool
 ```
 
-You previously answered `netstat` when asked for the modern command, so this lab deliberately puts `ss` next to the legacy name.
+`netstat` may still appear in older documentation, but for this lab the modern command association is `ss`.
 
 Do not spend required study time memorizing a large collection of `ss` flags.
 
@@ -505,13 +518,15 @@ ss                      netstat
 
 The legacy commands may not be installed on a modern Debian server. That is fine. Recognition is the goal; do not install `net-tools` just to make them appear.
 
-The critical trap is:
+The critical naming distinction is:
 
 ```text
-ipconfig    Windows
-ifconfig    legacy Linux/Unix networking tool
-ip          modern Linux networking tool
+ipconfig       Windows
+ifconfig       legacy Linux/Unix interface tool
+ip addr show   modern Linux interface-address command
 ```
+
+The first two differ by only one letter, but they belong to different operating-system toolsets.
 
 ---
 
@@ -548,7 +563,7 @@ cat /etc/resolv.conf
 
 are inspection commands in the way this lab uses them.
 
-This makes Prometheus a better learning target than a simulated filesystem for Lab 4: the addresses, routes, processes, memory, sockets, and resolver configuration are real.
+A real Linux system is especially useful for this lab because its addresses, routes, processes, memory, sockets, and resolver configuration provide authentic inspection output.
 
 ---
 
@@ -559,7 +574,7 @@ Be able to reconstruct this mapping:
 ```text
 process snapshot     ps
 live processes       top
-memory               free
+memory state         free
 kernel messages      dmesg
 
 configuration        /etc
