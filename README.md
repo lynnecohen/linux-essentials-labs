@@ -79,18 +79,19 @@ The generated `work/` directories used by the labs are ignored by Git, so normal
 
 ## Quick start
 
-From the repository root, set up the lab you want:
+From the repository root, set up **only the lab you are about to work on**:
 
 ```bash
-bash setup.sh 1
-bash setup.sh 2
-bash setup.sh 3
-bash setup.sh 4
-bash setup.sh 5
-
-# Optional post-core scripting lab
-bash setup.sh 7
+bash setup.sh LAB_NUMBER
 ```
+
+Replace `LAB_NUMBER` with the number of the lab you want to run. For example, to set up Lab 3:
+
+```bash
+bash setup.sh 3
+```
+
+Valid built lab numbers are currently `1`, `2`, `3`, `4`, `5`, and optional Lab `7`. You do **not** need to run the setup command once for every lab.
 
 Current built labs:
 
@@ -105,27 +106,33 @@ Current built labs:
 
 Each built lab contains a `READING.md` pre-reading and a `README.md` practical exercise.
 
-When you finish the scored tasks, run the checker from the repository root:
+When you finish the scored tasks for a lab, run **one checker command for that lab only** from the repository root:
 
 ```bash
-bash check.sh 1
-bash check.sh 2
-bash check.sh 3
+bash check.sh LAB_NUMBER
+```
+
+For example, to check Lab 4:
+
+```bash
 bash check.sh 4
-bash check.sh 5
-bash check.sh 7
 ```
 
-To rebuild a lab from scratch:
+Replace `LAB_NUMBER` with the lab you just completed. Do **not** run the checker once for every lab unless you intentionally want to check them all.
+
+To rebuild **one lab** from scratch:
 
 ```bash
-bash reset.sh 1
-bash reset.sh 2
-bash reset.sh 3
-bash reset.sh 4
-bash reset.sh 5
-bash reset.sh 7
+bash reset.sh LAB_NUMBER
 ```
+
+For example, to reset Lab 2:
+
+```bash
+bash reset.sh 2
+```
+
+Replace `LAB_NUMBER` with the lab you want to reset. This deletes and recreates that lab's generated `work/` directory, so run it only for the lab you intend to restart.
 
 ## Study strategy
 
