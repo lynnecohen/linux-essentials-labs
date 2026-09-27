@@ -63,8 +63,18 @@ case "$LAB" in
         chmod 0644 "$WORK/logs/"*.log
         echo "Lab 5 reset to its starting state."
         ;;
+    7|07|advanced|advanced-scripting)
+        WORK="$ROOT_DIR/07-advanced-scripting/work"
+        SOURCE="$ROOT_DIR/07-advanced-scripting/source"
+        rm -rf "$WORK"
+        mkdir -p "$WORK"
+        cp -a "$SOURCE/." "$WORK/"
+        mkdir -p "$WORK/scripts" "$WORK/results"
+        chmod 0644 "$WORK/systems/"*.status
+        echo "Optional Lab 7 reset to its starting state."
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, and 5."
+        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
         exit 1
         ;;
 esac
