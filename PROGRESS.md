@@ -2,6 +2,10 @@
 
 Use this as a lightweight checkpoint after each lab. The purpose is to tune later labs, not to create a detailed study journal.
 
+The **Core** track and **Level 2** track are separate. Completing or expanding Level 2 does not change the completion status of the Core Linux Essentials sequence.
+
+# Core Track
+
 ## Lab 1 — Production Incident Investigation
 
 **Completed:** Yes
@@ -164,7 +168,9 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 
 ---
 
-## Optional Lab 7 — Practical Bash Administration
+# Level 2 — Practical Linux
+
+## Lab 3 — Practical Bash Administration
 
 **Completed:**
 
@@ -188,6 +194,6 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 
 -
 
-**Anything to revisit in later practical Linux work:**
+**Anything to revisit in later Level 2 work:**
 
 -
