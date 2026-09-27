@@ -114,7 +114,15 @@ This distinction is useful:
 #!/bin/sh      targets the system's POSIX-style sh
 ```
 
-When a script is launched directly with `./script.sh`, the shebang selects the interpreter. When an interpreter is named explicitly:
+When a script is launched directly with:
+
+```bash
+./script.sh
+```
+
+the shebang within the script.sh file selects the interpreter. 
+
+Alternatively, when an interpreter is named explicitly:
 
 ```bash
 bash script.sh
