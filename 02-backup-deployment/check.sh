@@ -157,7 +157,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Lab 2 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 02-backup-deployment/README.md."
+    echo "Finish the exact-recall checkpoint in 02-backup-deployment/INSTRUCTIONS.md."
     exit 0
 else
     echo "One or more Lab 2 outcomes need another look."
