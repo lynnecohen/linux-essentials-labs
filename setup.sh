@@ -60,8 +60,8 @@ bash "$ROOT_DIR/reset.sh" "$LAB_NUMBER"
 echo
 echo "Setup complete for Lab $LAB_NUMBER."
 echo "Start with:   cd \"$ROOT_DIR/$LAB_DIR/work\""
-echo "Reading:      $ROOT_DIR/$LAB_DIR/READING.md"
-echo "Instructions: $ROOT_DIR/$LAB_DIR/README.md"
+echo "Read first:   $ROOT_DIR/$LAB_DIR/PRE_READING.md"
+echo "Then follow:  $ROOT_DIR/$LAB_DIR/INSTRUCTIONS.md"
 
 if [[ "$LAB_NUMBER" == "4" ]] && ! command -v host >/dev/null 2>&1; then
     echo
