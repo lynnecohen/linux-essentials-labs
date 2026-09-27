@@ -95,36 +95,68 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 
 ## Lab 4 — System & Network Inspection
 
+**Completed:** Yes
+
+**System/network targets recalled correctly:**
+
+- `ps` versus `top`
+- `free`
+- `dmesg`
+- `ip addr show`
+- `ip route show`
+- `inet` versus `inet6`
+- `ping -c 4`
+- `ss`
+- `/etc/hosts`
+- `/etc/resolv.conf`
+- `free` versus `df`
+
+**Items clarified during/after the checkpoint:**
+
+- `/proc` is broader than processes alone: it exposes process and kernel runtime information
+- `/sys` is a structured view of kernel/device information rather than a process directory
+- Linux Essentials v1.6 DNS recall target is `host`; `dig` is useful real-world tooling but belongs outside this required track
+- legacy Linux `ifconfig` must not be confused with Windows `ipconfig`
+- `ip addr show` answers what addresses interfaces have; `ip route show` answers where packets should be sent
+
+**Exact-recall result:** Strong overall. The main missed command association was `host` versus `dig`; the other corrections were precision/naming distinctions.
+
+**Plan adjustment:** Carry `host` versus `dig`, `ifconfig` versus `ipconfig`, and `/proc` versus `/sys` into the capstone as spaced reinforcement. Do not add more dedicated networking study unless later testing shows regression.
+
+---
+
+## Lab 5 — Bash Automation
+
 **Completed:**
 
-**System commands that felt automatic:**
+**Scripting syntax that felt automatic:**
 
 -
 
-**Networking commands that felt automatic:**
+**Syntax I had to look up or ask about:**
 
 -
 
-**Commands/paths I had to look up or ask about:**
+**Were variable assignment versus expansion automatic?**
 
 -
 
-**Was `free` versus `df` automatic?**
+**Were `$1` / `$2` positional arguments automatic?**
 
 -
 
-**Was `ip addr show` versus `ip route show` automatic?**
+**Was the `for ... do ... done` structure automatic?**
 
 -
 
-**Was `ss` versus legacy `netstat` automatic?**
+**Was `$?` and the zero-success convention automatic?**
 
 -
 
-**Were `/etc/hosts` versus `/etc/resolv.conf` automatic?**
+**Was direct execution (`chmod u+x` + `./script`) automatic?**
 
 -
 
-**Anything I want repeated in Lab 5 or the capstone:**
+**Anything I want repeated in the capstone:**
 
 -
