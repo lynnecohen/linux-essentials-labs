@@ -1,6 +1,6 @@
 # Lab 3 Pre-Reading — Users, Sessions, Ownership, and Permissions
 
-Read this before starting **Lab 3 — Users, Sessions & Permissions**. Labs 1 and 2 showed that text processing and archive syntax are now largely retained, so this lab shifts deliberate practice toward permissions, session-inspection commands, account files, and basic user/group administration syntax.
+Read this before starting **Lab 3 — Users, Sessions & Permissions**. This lab shifts deliberate practice toward permissions, session-inspection commands, account files, and basic user/group administration syntax. Text-processing and archive skills from Labs 1 and 2 may still appear incidentally.
 
 The core mental model is:
 
@@ -276,7 +276,7 @@ chown alice:staff report.txt
 
 changes the owning user to `alice` and the owning group to `staff`.
 
-Changing ownership usually requires appropriate privileges. Because Prometheus is a real server, the scored portion of this lab does **not** require you to alter real system ownership or create real accounts. You will practice the syntax without making production-account changes.
+Changing ownership usually requires appropriate privileges. The scored portion of this lab does **not** require altering ownership on a real system or creating persistent system accounts. Ownership syntax is practiced in an isolated lab context rather than against production account state.
 
 ---
 
@@ -318,7 +318,7 @@ Numeric notation can represent it with an additional leading digit:
 
 For this lab, understand both what the sticky bit does and how to recognize `t` in a long listing.
 
-Do **not** expand this into SUID/SGID study for the current exam plan; those are outside the deliberate scope of this lab.
+Do **not** expand this into SUID/SGID study for Linux Essentials v1.6 preparation; those are outside the deliberate scope of this lab.
 
 ---
 
@@ -418,7 +418,7 @@ w       current sessions + activity
 last    historical/recent login records
 ```
 
-This was previously a weak distinction, so Lab 3 deliberately makes you run all three close together.
+Because these commands are easy to confuse, Lab 3 deliberately places all three close together for comparison.
 
 ---
 
@@ -458,7 +458,7 @@ su -l alice
 
 requests a **login shell** for that user. The login-shell form more closely initializes the target user's login environment, including their home/environment setup.
 
-For the current exam plan, retain the distinction:
+For Linux Essentials v1.6 preparation, retain the distinction:
 
 ```text
 sudo command    run a command under sudo policy
@@ -498,7 +498,7 @@ High-value recognition points:
 
 `/etc/shadow` contains protected password-related information, including password hashes when local password authentication is used. It is much more tightly permissioned than `/etc/passwd`.
 
-For this exam plan, recognize the file and its purpose. You do **not** need to memorize detailed password-aging fields.
+For Linux Essentials v1.6 preparation, recognize the file and its purpose. Detailed password-aging fields are outside the deliberate scope of this lab.
 
 ### `/etc/group`
 
@@ -546,9 +546,9 @@ Set or change a user's password:
 passwd USER
 ```
 
-These operations change system account state and typically require privileges. In this lab you will construct the commands for exact recall but will **not execute them against Prometheus**.
+These operations change system account state and typically require privileges. In this lab, construct the commands for exact recall without executing them against a real or production system account database.
 
-Do not spend required study time here on `usermod`, `userdel`, `groupdel`, `visudo`, password-aging flags, account lock/unlock flags, or detailed shadow-field administration. Those belong in the post-WGU learn-later track for this project.
+Do not spend required study time here on `usermod`, `userdel`, `groupdel`, `visudo`, password-aging flags, account lock/unlock flags, or detailed shadow-field administration. Those belong in the post-exam learn-later track for this project.
 
 ---
 
