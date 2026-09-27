@@ -25,9 +25,14 @@ case "$LAB" in
         LAB_DIR="04-system-network"
         required_commands=(ps top free dmesg ip ss ping cat ls head grep)
         ;;
+    5|05|script|scripting|bash)
+        LAB_NUMBER=5
+        LAB_DIR="05-scripting"
+        required_commands=(bash chmod grep cat less)
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, and 4."
-        echo "Usage: bash setup.sh 1|2|3|4"
+        echo "Built labs: 1, 2, 3, 4, and 5."
+        echo "Usage: bash setup.sh 1|2|3|4|5"
         exit 1
         ;;
 esac
