@@ -22,7 +22,7 @@ The separation is intentional: future Level 2 additions should not make the comp
 02-backup/    Core Lab 2 — Backup, Restore & Deployment
 03-permissions/    Core Lab 3 — Users, Sessions & Permissions
 04-inspection/       Core Lab 4 — System & Network Inspection
-05-scripting/            Core Lab 5 — Bash Automation
+05-bash/            Core Lab 5 — Bash Automation
 06-capstone/             Core Lab 6 — Capstone
 review/                  Core knowledge-review material
 
