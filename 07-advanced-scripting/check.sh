@@ -206,7 +206,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Optional Lab 7 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 07-advanced-scripting/README.md."
+    echo "Finish the exact-recall checkpoint in 07-advanced-scripting/INSTRUCTIONS.md."
     exit 0
 else
     echo "One or more Optional Lab 7 outcomes need another look."
