@@ -87,6 +87,9 @@ bash setup.sh 2
 bash setup.sh 3
 bash setup.sh 4
 bash setup.sh 5
+
+# Optional post-core scripting lab
+bash setup.sh 7
 ```
 
 Current built labs:
@@ -97,6 +100,7 @@ Current built labs:
 03-users-permissions/ Lab 3 — Users, Sessions & Permissions
 04-system-network/    Lab 4 — System & Network Inspection
 05-scripting/         Lab 5 — Bash Automation
+07-advanced-scripting/ Optional Lab 7 — Practical Bash Administration
 ```
 
 Each built lab contains a `READING.md` pre-reading and a `README.md` practical exercise.
@@ -109,6 +113,7 @@ bash check.sh 2
 bash check.sh 3
 bash check.sh 4
 bash check.sh 5
+bash check.sh 7
 ```
 
 To rebuild a lab from scratch:
@@ -119,6 +124,7 @@ bash reset.sh 2
 bash reset.sh 3
 bash reset.sh 4
 bash reset.sh 5
+bash reset.sh 7
 ```
 
 ## Study strategy
@@ -134,9 +140,15 @@ The working sequence is:
 5. **Bash Automation** — Linux Essentials v1.6 scripting core
 6. **Capstone** — independent troubleshooting across the prior labs
 
+### Optional post-core lab
+
+**Optional Lab 7 — Practical Bash Administration** goes beyond the Linux Essentials v1.6 exam scope and introduces scripting constructs commonly encountered in practical Linux administration, including conditionals, tests, `while`, `case`, functions, command substitution, arithmetic expansion, interactive prompts, richer positional-argument handling, and explicit exit statuses.
+
+It is numbered after the capstone so that Labs 1–6 remain the required exam-prep sequence. It can be completed after Lab 5 or after the capstone.
+
 ## Scope rule
 
-Required lab work is gated to **Linux Essentials v1.6 / 010-160** scope, with a small amount of instructor-emphasized syntax reinforcement where it has high exam value. Useful but lower-ROI Linux administration topics belong in the post-exam `learn-later/` track rather than the required exam labs.
+Required Labs 1–6 are gated to **Linux Essentials v1.6 / 010-160** scope, with a small amount of instructor-emphasized syntax reinforcement where it has high exam value. Optional Lab 7 is explicitly outside that exam scope and is intended as practical post-core Bash practice. Other useful but lower-ROI Linux administration topics belong in the post-exam `learn-later/` track rather than the required exam labs.
 
 ## Repository workflow
 
