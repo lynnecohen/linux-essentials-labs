@@ -25,8 +25,12 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/05-scripting/work"
         echo "Lab 5 generated workspace removed."
         ;;
+    7|07|advanced|advanced-scripting)
+        rm -rf "$ROOT_DIR/07-advanced-scripting/work"
+        echo "Optional Lab 7 generated workspace removed."
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, and 5."
+        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
         exit 1
         ;;
 esac
