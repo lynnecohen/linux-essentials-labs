@@ -7,30 +7,33 @@ LAB="${1:-1}"
 case "$LAB" in
     1|01|incident)
         rm -rf "$ROOT_DIR/01-incident/work"
-        echo "Lab 1 generated workspace removed."
+        echo "Core Lab 1 generated workspace removed."
         ;;
     2|02|backup|deployment)
         rm -rf "$ROOT_DIR/02-backup-deployment/work"
-        echo "Lab 2 generated workspace removed."
+        echo "Core Lab 2 generated workspace removed."
         ;;
     3|03|users|permissions)
         rm -rf "$ROOT_DIR/03-users-permissions/work"
-        echo "Lab 3 generated workspace removed."
+        echo "Core Lab 3 generated workspace removed."
         ;;
     4|04|system|network)
         rm -rf "$ROOT_DIR/04-system-network/work"
-        echo "Lab 4 generated workspace removed."
+        echo "Core Lab 4 generated workspace removed."
         ;;
     5|05|script|scripting|bash)
         rm -rf "$ROOT_DIR/05-scripting/work"
-        echo "Lab 5 generated workspace removed."
+        echo "Core Lab 5 generated workspace removed."
         ;;
-    7|07|advanced|advanced-scripting)
+    l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
+        rm -rf "$ROOT_DIR/level-2/03-bash/work"
+        # Remove a generated workspace left by the pre-Level-2 layout, if present.
         rm -rf "$ROOT_DIR/07-advanced-scripting/work"
-        echo "Optional Lab 7 generated workspace removed."
+        echo "Level 2 Lab 3 generated workspace removed."
         ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
+        echo "Built Core labs: 1, 2, 3, 4, 5."
+        echo "Built Level 2 labs: l2-3."
         exit 1
         ;;
 esac
