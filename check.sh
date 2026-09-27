@@ -20,8 +20,11 @@ case "$LAB" in
     5|05|script|scripting|bash)
         exec bash "$ROOT_DIR/05-scripting/check.sh"
         ;;
+    7|07|advanced|advanced-scripting)
+        exec bash "$ROOT_DIR/07-advanced-scripting/check.sh"
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, and 5."
+        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
         exit 1
         ;;
 esac
