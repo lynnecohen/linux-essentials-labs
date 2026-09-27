@@ -1,10 +1,37 @@
 # Linux Essentials Labs
 
-Hands-on practice labs for **LPI Linux Essentials 010-160**.
+Hands-on Linux learning with a defined **LPI Linux Essentials 010-160 Core track** and an optional **Level 2 practical Linux track**.
 
 Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, lynnecohen.com.
 
-***This repo is still a work in progress. Expect further changes until this line is updated.***
+## Project status
+
+This repository has two separate completion tracks:
+
+- **Core — Linux Essentials 010-160:** In development. Core Labs 1–5 are built. The Core Capstone and Knowledge Review are the remaining planned pieces before the Core track is considered complete.
+- **Level 2 — Practical Linux:** Expanding. This optional track continues beyond the certification core and can grow independently after the Core track is complete.
+
+Level 2 is a repository difficulty label. It does **not** mean LPI Linux Essentials version 2.0.
+
+The separation is intentional: future Level 2 additions should not make the completed Core curriculum appear unfinished.
+
+## Repository structure
+
+```text
+01-incident/             Core Lab 1 — Production Incident Investigation
+02-backup-deployment/    Core Lab 2 — Backup, Restore & Deployment
+03-users-permissions/    Core Lab 3 — Users, Sessions & Permissions
+04-system-network/       Core Lab 4 — System & Network Inspection
+05-scripting/            Core Lab 5 — Bash Automation
+06-capstone/             Core Lab 6 — Capstone
+review/                  Core knowledge-review material
+
+level-2/
+  README.md              Level 2 roadmap and scope
+  03-bash/               Level 2 Lab 3 — Practical Bash Administration
+```
+
+Only built modules contain full learner materials and working lab infrastructure. Planned Level 2 modules are documented in `level-2/README.md` rather than represented by placeholder directories.
 
 ## Getting a Linux system
 
@@ -82,84 +109,108 @@ The generated `work/` directories used by the labs are ignored by Git, so normal
 From the repository root, set up **only the lab you are about to work on**:
 
 ```bash
-bash setup.sh LAB_NUMBER
+bash setup.sh LAB_ID
 ```
 
-Replace `LAB_NUMBER` with the number of the lab you want to run. For example, to set up Lab 3:
+For Core labs, use the lab number. For example:
 
 ```bash
 bash setup.sh 3
 ```
 
-Valid built lab numbers are currently `1`, `2`, `3`, `4`, `5`, and optional Lab `7`. You do **not** need to run the setup command once for every lab.
-
-Current built labs:
+Currently built Core lab IDs are:
 
 ```text
-01-incident/           Lab 1 — Production Incident Investigation
-02-backup-deployment/ Lab 2 — Backup, Restore & Deployment
-03-users-permissions/ Lab 3 — Users, Sessions & Permissions
-04-system-network/    Lab 4 — System & Network Inspection
-05-scripting/         Lab 5 — Bash Automation
-07-advanced-scripting/ Optional Lab 7 — Practical Bash Administration
+1
+2
+3
+4
+5
 ```
 
-Each built lab uses clearly separated learner materials: `PRE_READING.md` for concept preparation and `INSTRUCTIONS.md` for the hands-on exercise.
+The Core Capstone will use ID `6` after it is built.
 
-When you finish the scored tasks for a lab, run **one checker command for that lab only** from the repository root:
+Level 2 uses an explicit track prefix so its numbering cannot be confused with the Core sequence. The currently built Level 2 module is:
 
 ```bash
-bash check.sh LAB_NUMBER
+bash setup.sh l2-3
 ```
 
-For example, to check Lab 4:
+Each built lab uses clearly separated learner materials:
+
+```text
+PRE_READING.md    concept preparation
+INSTRUCTIONS.md   hands-on exercise
+```
+
+When you finish a lab, run the checker for **that lab only**:
+
+```bash
+bash check.sh LAB_ID
+```
+
+Examples:
 
 ```bash
 bash check.sh 4
+bash check.sh l2-3
 ```
 
-Replace `LAB_NUMBER` with the lab you just completed. Do **not** run the checker once for every lab unless you intentionally want to check them all.
-
-To rebuild **one lab** from scratch:
+To rebuild one generated workspace from scratch:
 
 ```bash
-bash reset.sh LAB_NUMBER
+bash reset.sh LAB_ID
 ```
 
-For example, to reset Lab 2:
+To remove one generated workspace:
 
 ```bash
-bash reset.sh 2
+bash cleanup.sh LAB_ID
 ```
 
-Replace `LAB_NUMBER` with the lab you want to reset. This deletes and recreates that lab's generated `work/` directory, so run it only for the lab you intend to restart.
+## Core track — Linux Essentials 010-160
 
-## Study strategy
+The Core track is optimized for high-ROI Linux Essentials preparation rather than exhaustive Linux administration. Basic navigation and file-management skills are assumed; labs concentrate on commands, flags, and distinctions that benefit from deliberate practice.
 
-This repository is intentionally optimized for high-ROI exam preparation rather than exhaustive Linux administration. Basic navigation and file-management skills are assumed; labs concentrate on commands, flags, and distinctions that still need deliberate practice.
-
-The working sequence is:
+The sequence is:
 
 1. **Production Incident Investigation** — text processing, pipes, redirection, quoting, glob/regex distinctions
 2. **Backup, Restore & Deployment** — tar/compression and symbolic links
 3. **Users, Sessions & Permissions** — permissions, ownership, sessions, account files, sticky bit
 4. **System & Network Inspection** — processes, memory, Linux system paths, IP/routing/DNS/socket inspection
 5. **Bash Automation** — Linux Essentials v1.6 scripting core
-6. **Capstone** — independent troubleshooting across the prior labs
+6. **Capstone** — independent diagnosis, tool selection, remediation, and verification across prior labs
+7. **Knowledge Review** — non-lab objectives and recognition material that do not justify a full terminal scenario
 
-### Optional post-core lab
+The Capstone is the practical endpoint. The Knowledge Review closes remaining objective coverage that is better tested by recognition and recall than by artificial hands-on exercises.
 
-**Optional Lab 7 — Practical Bash Administration** goes beyond the Linux Essentials v1.6 exam scope and introduces scripting constructs commonly encountered in practical Linux administration, including conditionals, tests, `while`, `case`, functions, command substitution, arithmetic expansion, interactive prompts, richer positional-argument handling, and explicit exit statuses.
+## Level 2 — Practical Linux
 
-It is numbered after the capstone so that Labs 1–6 remain the required exam-prep sequence. It can be completed after Lab 5 or after the capstone.
+The optional `level-2/` track extends the Core curriculum into practical Linux administration.
+
+Its modules may include material that was deliberately excluded from the 010-160 Core because it was lower priority for that exam, material from newer objectives, and practical administration skills that are valuable beyond Linux Essentials.
+
+The first built Level 2 module is:
+
+```text
+level-2/03-bash/    Practical Bash Administration
+```
+
+Its topics include conditionals, tests, `while`, `case`, functions, command substitution, arithmetic expansion, interactive prompts, richer positional-argument handling, and meaningful exit statuses.
+
+See `level-2/README.md` for the Level 2 roadmap.
 
 ## Scope rule
 
-Required Labs 1–6 are gated to **Linux Essentials v1.6 / 010-160** scope, with a small amount of instructor-emphasized syntax reinforcement where it has high exam value. Optional Lab 7 is explicitly outside that exam scope and is intended as practical post-core Bash practice. Other useful but lower-ROI Linux administration topics belong in the post-exam `learn-later/` track rather than the required exam labs.
+Core Labs 1–6 and the Core Knowledge Review are gated to **Linux Essentials v1.6 / 010-160** scope, with limited high-value reinforcement where needed for the current course.
+
+Level 2 is deliberately broader. Every Level 2 module should identify its own scope rather than implying that all of its content is required for 010-160.
 
 ## Repository workflow
 
-Labs are built incrementally. After each lab, later labs may be adjusted based on what becomes fluent and what still needs repetition. The capstone remains intentionally unrevealed until the prerequisite labs are complete.
+The Core track has a defined finish line. Once Core Lab 6 and the Core Knowledge Review are complete and tested, the Core track can be marked complete and released even if Level 2 continues to expand.
+
+Level 2 is therefore additive rather than a blocker for a stable Core release.
 
 Use `PROGRESS.md` as a lightweight checkpoint after a lab so later exercises can be tuned around what was automatic versus what still required recall support.
 
