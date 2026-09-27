@@ -32,7 +32,7 @@ case "$LAB" in
     5|05|script|scripting|bash)
         LAB_ID="5"
         LAB_LABEL="Core Lab 5"
-        LAB_DIR="05-scripting"
+        LAB_DIR="05-bash"
         required_commands=(bash chmod grep cat less)
         ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
