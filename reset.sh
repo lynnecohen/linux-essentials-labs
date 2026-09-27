@@ -54,8 +54,8 @@ case "$LAB" in
         echo "Core Lab 4 reset to its starting state."
         ;;
     5|05|script|scripting|bash)
-        WORK="$ROOT_DIR/05-scripting/work"
-        SOURCE="$ROOT_DIR/05-scripting/source"
+        WORK="$ROOT_DIR/05-bash/work"
+        SOURCE="$ROOT_DIR/05-bash/source"
         rm -rf "$WORK"
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
