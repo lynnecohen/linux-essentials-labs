@@ -1,0 +1,4 @@
+2026-09-26 21:01:03 INFO login accepted for alice
+2026-09-26 21:03:47 INFO login accepted for bob
+2026-09-26 21:14:09 WARN repeated login attempt for carol
+2026-09-26 21:20:16 INFO login accepted for carol
