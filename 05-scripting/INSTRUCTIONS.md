@@ -284,8 +284,8 @@ Complete these without looking back at the reading if possible.
 
 1. Write the standard Bash shebang used in this lab.
 2. What character begins an ordinary Bash comment?
-3. Write a valid variable assignment that stores `operations` in a variable named `TEAM`.
-4. Why is `TEAM = operations` not equivalent to `TEAM=operations`?
+3. Write a valid variable assignment that stores the literal two-word phrase `night shift` in a variable named `TEAM`.
+4. Why is `TEAM = "night shift"` not equivalent to `TEAM="night shift"`?
 5. How do you expand the value of a variable named `TEAM`?
 6. What do `$1` and `$2` represent inside a script?
 7. Write a basic `for` loop that prints `alpha`, `beta`, and `gamma` one at a time.
