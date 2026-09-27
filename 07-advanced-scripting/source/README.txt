@@ -1,3 +1,0 @@
-Optional Lab 7 uses fictional Northstar system-status files.
-All scripts and reports should be created inside the generated work directory.
-No real services or system configuration are changed.
