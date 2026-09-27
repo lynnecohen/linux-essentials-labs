@@ -22,7 +22,7 @@ case "$LAB" in
         echo "Core Lab 4 generated workspace removed."
         ;;
     5|05|script|scripting|bash)
-        rm -rf "$ROOT_DIR/05-scripting/work"
+        rm -rf "$ROOT_DIR/05-bash/work"
         echo "Core Lab 5 generated workspace removed."
         ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
