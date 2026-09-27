@@ -19,7 +19,7 @@ chmod u+x        add execute permission
 
 Commands from earlier labs may appear inside the script, but the new skill is **Bash structure and execution**, not learning additional administration commands.
 
-This lab does **not** require advanced scripting constructs such as `if`, `while`, functions, arithmetic expansion, command substitution, or `read -p`.
+This lab does **not** require advanced scripting constructs such as `if`, `while`, functions, arithmetic expansion, or `read -p`. Command substitution is included later as **recognition-only** material because it is common in real shell scripts, but it is not a scored or required construction target for this lab.
 
 ---
 
@@ -511,7 +511,62 @@ It intentionally does **not** use a conditional statement. The script can displa
 
 ---
 
-## 14. What is deliberately outside this lab
+## 14. Recognition-only: command substitution
+
+Command substitution runs a command and replaces the substitution expression with that command's standard output.
+
+Modern Bash syntax uses:
+
+```bash
+$(command)
+```
+
+For example:
+
+```bash
+TODAY=$(date)
+echo "$TODAY"
+```
+
+Bash runs `date`, captures its output, and assigns that output to `TODAY`.
+
+A common older form uses **backticks** (also called grave accents):
+
+```bash
+TODAY=`date`
+```
+
+The backtick form and `$(...)` both perform command substitution, but modern shell scripts generally prefer `$(...)` because it is easier to read and easier to nest.
+
+For recognition:
+
+```text
+$(command)    modern command substitution
+`command`     older/legacy command-substitution syntax
+```
+
+Command substitution is **not the same thing as quoting**:
+
+```text
+'single quotes'    preserve enclosed text literally
+"double quotes"    allow expansions such as $VAR while preserving the result as one argument
+$(command)         execute a command and substitute its output
+`command`          legacy syntax for the same command-substitution operation
+```
+
+Double quotes can contain command substitution:
+
+```bash
+echo "Today is $(date)"
+```
+
+In that example, Bash runs `date`, substitutes its output into the double-quoted string, and then passes the resulting text as one argument to `echo`.
+
+This section is included so that common Bash scripts and textbook examples using either form are understandable. Writing command substitutions is not required by the Lab 5 practical or checker.
+
+---
+
+## 15. What is deliberately outside this lab
 
 Bash can do much more than the Linux Essentials v1.6 core used here. The following are useful real-world topics, but they are reserved for later study in this project:
 
@@ -521,7 +576,7 @@ while loops
 functions
 read -p
 arithmetic expansion:  $(( ... ))
-command substitution:  $( ... )
+advanced command-substitution use
 numeric/string/file test operators
 more advanced argument handling
 ```
@@ -530,7 +585,7 @@ Keeping these out of the required lab prevents broader Bash knowledge from crowd
 
 ---
 
-## 15. What to retain before starting the lab
+## 16. What to retain before starting the lab
 
 Be able to reconstruct these forms:
 
@@ -569,6 +624,9 @@ $?              previous command's exit status
 
 bash file.sh     Bash reads the file
 ./file.sh        direct execution; execute permission and shebang matter
+
+$(command)       modern command substitution — recognition only
+`command`         legacy command substitution — recognition only
 ```
 
-The practical lab will use these pieces to automate a small log-inspection task without introducing scripting features beyond the Linux Essentials v1.6 target.
+The practical lab will use the required pieces to automate a small log-inspection task. Command substitution is included only so common shell-script syntax can be recognized; it is not required by the practical exercise.
