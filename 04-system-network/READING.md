@@ -411,7 +411,7 @@ ping -c 4 127.0.0.1
 
 Remember that a failed ping does not prove that a host is down. ICMP traffic can be filtered. The command is still useful as a basic connectivity/reachability test.
 
-You already demonstrated this syntax earlier, so Lab 4 uses it only as light reinforcement.
+For this lab, `ping -c` is a light reinforcement target rather than a major command family to study.
 
 ---
 
