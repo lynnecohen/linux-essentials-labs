@@ -17,8 +17,11 @@ case "$LAB" in
     4|04|system|network)
         exec bash "$ROOT_DIR/04-system-network/check.sh"
         ;;
+    5|05|script|scripting|bash)
+        exec bash "$ROOT_DIR/05-scripting/check.sh"
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, and 4."
+        echo "Built labs: 1, 2, 3, 4, and 5."
         exit 1
         ;;
 esac
