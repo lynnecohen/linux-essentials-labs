@@ -160,3 +160,34 @@ Use this as a lightweight checkpoint after each lab. The purpose is to tune late
 **Anything I want repeated in the capstone:**
 
 -
+
+
+---
+
+## Optional Lab 7 — Practical Bash Administration
+
+**Completed:**
+
+**Conditionals/tests that felt automatic:**
+
+-
+
+**Looping/parsing syntax that felt automatic:**
+
+-
+
+**Functions and return/exit behavior:**
+
+-
+
+**Command substitution and arithmetic expansion:**
+
+-
+
+**Argument handling (`$#`, `"$@"`, `shift`):**
+
+-
+
+**Anything to revisit in later practical Linux work:**
+
+-
