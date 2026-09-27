@@ -44,11 +44,11 @@ check_mode() {
 echo "Lab 3 — checking permission and account-recognition outcomes"
 echo
 
-check_mode "deploy.sh owner execute permission" "$WORK/permissions/deploy.sh" "744"
-check_mode "healthcheck.sh numeric mode" "$WORK/permissions/healthcheck.sh" "755"
-check_mode "portal.conf group-write removal" "$WORK/permissions/portal.conf" "644"
-check_mode "secret.key restricted mode" "$WORK/permissions/secret.key" "600"
-check_mode "shared-drop sticky directory" "$WORK/permissions/shared-drop" "1777"
+check_mode "deploy.sh owner execute permission" "$WORK/files/deploy.sh" "744"
+check_mode "healthcheck.sh numeric mode" "$WORK/files/healthcheck.sh" "755"
+check_mode "portal.conf group-write removal" "$WORK/files/portal.conf" "644"
+check_mode "secret.key restricted mode" "$WORK/files/secret.key" "600"
+check_mode "shared-drop sticky directory" "$WORK/files/shared-drop" "1777"
 
 if [[ -s "$WORK/results/current-id.txt" ]] &&    grep -q 'uid=' "$WORK/results/current-id.txt" &&    grep -q 'gid=' "$WORK/results/current-id.txt"; then
     pass "saved id output"
@@ -63,7 +63,7 @@ else
     fail "account-file recognition map — check results/account-files.txt"
 fi
 
-if [[ -f "$WORK/permissions/shared-drop/README.txt" ]]; then
+if [[ -f "$WORK/files/shared-drop/README.txt" ]]; then
     pass "shared-drop contents preserved"
 else
     fail "shared-drop contents preserved — README.txt is missing"
@@ -74,7 +74,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Lab 3 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 03-permissions/INSTRUCTIONS.md."
+    echo "Finish the exact-recall checkpoint in 03-files/INSTRUCTIONS.md."
     exit 0
 else
     echo "One or more Lab 3 outcomes need another look."
