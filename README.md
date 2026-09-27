@@ -1,6 +1,7 @@
 # Linux Essentials Labs
 
-Hands-on practice environment for **LPI Linux Essentials 010-160 / WGU D281**.
+Hands-on practice labs for **LPI Linux Essentials 010-160**.
+Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, lynnecohen.com.
 
 ## Getting a Linux system
 
