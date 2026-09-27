@@ -438,7 +438,7 @@ wc -c    bytes
 wc -m    characters
 ```
 
-For the current exam plan, prioritize `-l`, `-w`, and `-c`. You do not need to spend deliberate study time memorizing `-m`.
+For Linux Essentials v1.6 preparation, prioritize `-l`, `-w`, and `-c`. Deliberate memorization of `-m` is not required for this lab.
 
 A powerful use of `wc` is counting output from another command:
 
