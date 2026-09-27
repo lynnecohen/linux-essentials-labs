@@ -69,6 +69,63 @@ For Linux Essentials v1.6, retain the exact association:
 
 The shebang must be on the first line to serve this purpose.
 
+### The current shell and the script interpreter are separate
+
+The shell at the interactive prompt does not have to be the shell that interprets a script.
+
+For example, a user can be working interactively in `zsh` and execute:
+
+```bash
+./report.sh
+```
+
+If `report.sh` begins with:
+
+```bash
+#!/bin/bash
+```
+
+the operating system launches `/bin/bash` to interpret the script.
+
+Conceptually:
+
+```text
+interactive zsh
+    ↓
+./report.sh
+    ↓
+operating system reads #!/bin/bash
+    ↓
+Bash interprets report.sh
+```
+
+A script intended for the portable POSIX shell language may instead use:
+
+```sh
+#!/bin/sh
+```
+
+On Debian, `/bin/sh` is commonly a symbolic link to `dash`. That does **not** mean a script must explicitly name `dash`; `#!/bin/sh` means "use this system's standard `sh` interpreter."
+
+This distinction is useful:
+
+```text
+#!/bin/bash    explicitly requires Bash
+#!/bin/sh      targets the system's POSIX-style sh
+```
+
+When a script is launched directly with `./script.sh`, the shebang selects the interpreter. When an interpreter is named explicitly:
+
+```bash
+bash script.sh
+zsh script.sh
+sh script.sh
+```
+
+that named program interprets the file; the shebang is not what selected the interpreter in that invocation.
+
+Lab 5 uses `#!/bin/bash` because Bash is the scripting target for the exercise.
+
 ---
 
 ## 3. Comments
@@ -138,6 +195,77 @@ The distinction is:
 TEAM=operations     assign a value
 $TEAM               expand/retrieve the value
 ```
+
+### `$NAME` versus `${NAME}`
+
+Both forms expand the same variable:
+
+```bash
+echo "$TEAM"
+echo "${TEAM}"
+```
+
+Curly braces make the **boundary of the variable name explicit**.
+
+For example:
+
+```bash
+COLOR=blue
+echo "${COLOR}ish"
+```
+
+prints:
+
+```text
+blueish
+```
+
+Without the braces:
+
+```bash
+echo "$COLORish"
+```
+
+the shell looks for a variable named `COLORish`, because letters, numbers, and underscores can be part of a variable name.
+
+Braces are therefore about **where the variable name ends**. They are not what protects spaces.
+
+That is the job of quotes:
+
+```text
+$COLOR          expand the variable
+${COLOR}        expand the variable with an explicit name boundary
+"$COLOR"        expand it and preserve the result as one shell argument
+"${COLOR}.txt"  preserve the value as one argument and append .txt
+```
+
+For example, if:
+
+```bash
+COLOR="blue green"
+```
+
+then:
+
+```bash
+touch "${COLOR}.txt"
+```
+
+passes one filename to `touch`:
+
+```text
+blue green.txt
+```
+
+The quote characters themselves do **not** become part of the filename. They are shell syntax used while parsing the command.
+
+GNU `ls` may display a filename containing spaces with visible quotes:
+
+```text
+'blue green.txt'
+```
+
+Those quotes are display formatting added by `ls` to make it clear that the text is one filename; they are not stored in the filename.
 
 ---
 
@@ -239,20 +367,111 @@ $2 = second argument supplied to the script
 
 ---
 
-## 7. `echo`: simple output
+## 7. Reading input with `read -r` — useful shell practice
 
-`echo` prints text or expanded values:
+Although the scored Lab 5 script receives data through positional arguments, interactive shell scripts often use `read` to accept input:
+
+```sh
+read color
+```
+
+A common safer form is:
+
+```sh
+read -r color
+```
+
+The `-r` option tells `read` to treat backslashes literally rather than using them as escape characters or line-continuation markers.
+
+For example, if a user enters:
+
+```text
+blue\green
+```
+
+`read -r` preserves the backslash in the variable value.
+
+The `-r` option is **not** what preserves spaces in a response. A value such as:
+
+```text
+dark green
+```
+
+can be read into one variable with or without `-r`. The purpose of `-r` is specifically to disable special backslash handling.
+
+For straightforward text input, `read -r VARIABLE` is a good default habit.
+
+---
+
+## 8. `echo` and `printf`: simple output and exact formatting
+
+`echo` is convenient for simple output:
 
 ```bash
 echo "Starting"
 echo "$LABEL"
 ```
 
-It can also participate in redirection:
+It normally adds a newline automatically.
+
+`printf` provides more explicit and portable formatting:
+
+```sh
+printf "Starting\n"
+printf "%s\n" "$LABEL"
+```
+
+Unlike `echo`, `printf` does not automatically add a newline; `\n` requests one explicitly.
+
+This makes `printf` especially useful for prompts that should leave the cursor on the same line:
+
+```sh
+printf "What's your favorite color?: "
+read -r color
+```
+
+A commonly seen alternative is:
+
+```sh
+echo -n "What's your favorite color?: "
+```
+
+but `echo` option and escape handling has historically varied across shell implementations. For portable shell scripts, `printf` is more predictable when exact formatting matters.
+
+### Format strings
+
+`printf` uses a format string:
+
+```sh
+printf "User: %s\n" "$USER"
+```
+
+where:
+
+```text
+%s    insert a string
+\n    newline
+```
+
+A useful pattern is to keep variable data separate from the format string:
+
+```sh
+printf "%s's favorite color is %s!\n" "$user" "$color"
+```
+
+rather than:
+
+```sh
+printf "$color\n"
+```
+
+If user-controlled data contains characters such as `%`, putting it directly into the format string can cause `printf` to interpret those characters as formatting instructions. Supplying the data as a separate argument with `%s` avoids that problem.
+
+Both `echo` and `printf` can participate in redirection:
 
 ```bash
 echo "Report" > "$REPORT"
-echo "More data" >> "$REPORT"
+printf "%s\n" "More data" >> "$REPORT"
 ```
 
 The redirection rules remain the same as in Lab 1:
@@ -262,11 +481,13 @@ The redirection rules remain the same as in Lab 1:
 >>    write stdout to a file, appending
 ```
 
+For the Linux Essentials v1.6 exercise, `echo` remains the required command to recognize and use. `printf` is included here as practical shell-portability knowledge.
+
 A script does not change the meaning of these operators. It simply lets the same command sequence be stored and repeated.
 
 ---
 
-## 8. The basic `for` loop
+## 9. The basic `for` loop
 
 A `for` loop repeats commands for each item in a list.
 
@@ -320,7 +541,7 @@ For Linux Essentials v1.6, the important target is the basic `for ... in ...; do
 
 ---
 
-## 9. Exit status and `$?`
+## 10. Exit status and `$?`
 
 After a command finishes, it returns an **exit status**.
 
@@ -392,7 +613,7 @@ Do not overgeneralize all nonzero values into one exact meaning; different comma
 
 ---
 
-## 10. Running a script with `bash`
+## 11. Running a script with `bash`
 
 A script can be passed explicitly to Bash:
 
@@ -408,13 +629,15 @@ This is useful while developing or inspecting a script.
 
 ---
 
-## 11. Executing a script directly
+## 12. Executing a script directly
 
 To launch a script directly, it normally needs execute permission:
 
 ```bash
 chmod u+x report.sh
 ```
+
+If the owner is the person who needs to run the script, `u+x` is sufficient; there is no need to make the script executable by every user merely to run it personally.
 
 Then, from the directory containing it:
 
@@ -451,7 +674,7 @@ bash report.sh    explicitly invoke Bash on the file
 
 ---
 
-## 12. Editors: `vi` and `nano`
+## 13. Editors: `vi` and `nano`
 
 Linux Essentials expects awareness of common text editors such as:
 
@@ -473,7 +696,7 @@ This lab does not require advanced editor proficiency. The target is recognition
 
 ---
 
-## 13. A complete v1.6-sized example
+## 14. A complete v1.6-sized example
 
 This example stays within the deliberate scope of the lab:
 
@@ -511,7 +734,7 @@ It intentionally does **not** use a conditional statement. The script can displa
 
 ---
 
-## 14. Recognition-only: command substitution
+## 15. Recognition-only: command substitution
 
 Command substitution runs a command and replaces the substitution expression with that command's standard output.
 
@@ -566,7 +789,7 @@ This section is included so that common Bash scripts and textbook examples using
 
 ---
 
-## 15. What is deliberately outside this lab
+## 16. What is deliberately outside this lab
 
 Bash can do much more than the Linux Essentials v1.6 core used here. The following are useful real-world topics, but they are reserved for later study in this project:
 
@@ -585,7 +808,7 @@ Keeping these out of the required lab prevents broader Bash knowledge from crowd
 
 ---
 
-## 16. What to retain before starting the lab
+## 17. What to retain before starting the lab
 
 Be able to reconstruct these forms:
 
@@ -615,6 +838,8 @@ And keep these concepts distinct:
 ```text
 NAME=value      assign
 $NAME           expand the variable
+${NAME}         same expansion with an explicit variable-name boundary
+"${NAME}.txt"   quote the resulting filename; braces delimit the name
 
 $1              first positional argument
 $2              second positional argument
@@ -627,6 +852,9 @@ bash file.sh     Bash reads the file
 
 $(command)       modern command substitution — recognition only
 `command`         legacy command substitution — recognition only
+
+read -r NAME     read input while preserving backslashes — practical enrichment
+printf           predictable formatted output — practical enrichment
 ```
 
 The practical lab will use the required pieces to automate a small log-inspection task. Command substitution is included only so common shell-script syntax can be recognized; it is not required by the practical exercise.
