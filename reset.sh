@@ -53,8 +53,18 @@ case "$LAB" in
         mkdir -p "$WORK/results"
         echo "Lab 4 reset to its starting state."
         ;;
+    5|05|script|scripting|bash)
+        WORK="$ROOT_DIR/05-scripting/work"
+        SOURCE="$ROOT_DIR/05-scripting/source"
+        rm -rf "$WORK"
+        mkdir -p "$WORK"
+        cp -a "$SOURCE/." "$WORK/"
+        mkdir -p "$WORK/scripts" "$WORK/results"
+        chmod 0644 "$WORK/logs/"*.log
+        echo "Lab 5 reset to its starting state."
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, and 4."
+        echo "Built labs: 1, 2, 3, 4, and 5."
         exit 1
         ;;
 esac
