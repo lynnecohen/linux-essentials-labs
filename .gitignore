@@ -1,10 +1,15 @@
-# Generated lab workspaces and learner output
+# Generated Core lab workspaces and learner output
 01-incident/work/
 02-backup-deployment/work/
 03-users-permissions/work/
 04-system-network/work/
 05-scripting/work/
 06-capstone/work/
+
+# Generated Level 2 workspaces
+level-2/03-bash/work/
+
+# Legacy generated workspace from the pre-Level-2 layout
 07-advanced-scripting/work/
 
 # Common editor/temp files
