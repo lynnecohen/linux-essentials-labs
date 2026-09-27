@@ -4,6 +4,8 @@ Hands-on practice labs for **LPI Linux Essentials 010-160**.
 
 Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, lynnecohen.com.
 
+***This repo is still a work in progress. Expect further changes until this line is updated.***
+
 ## Getting a Linux system
 
 These labs need a persistent Linux environment with Bash and standard command-line utilities. A dedicated physical server is **not** required.
