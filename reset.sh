@@ -12,7 +12,7 @@ case "$LAB" in
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/results"
-        echo "Lab 1 reset to its starting state."
+        echo "Core Lab 1 reset to its starting state."
         ;;
     2|02|backup|deployment)
         WORK="$ROOT_DIR/02-backup-deployment/work"
@@ -23,7 +23,7 @@ case "$LAB" in
         mkdir -p "$WORK/results" "$WORK/restore"
         rm -f "$WORK/releases/current"
         ln -s release-2026.09.03 "$WORK/releases/current"
-        echo "Lab 2 reset to its starting state."
+        echo "Core Lab 2 reset to its starting state."
         ;;
     3|03|users|permissions)
         WORK="$ROOT_DIR/03-users-permissions/work"
@@ -42,7 +42,7 @@ case "$LAB" in
         chmod 0644 "$WORK/account-db/passwd" "$WORK/account-db/group"
         chmod 0640 "$WORK/account-db/shadow"
 
-        echo "Lab 3 reset to its starting state."
+        echo "Core Lab 3 reset to its starting state."
         ;;
     4|04|system|network)
         WORK="$ROOT_DIR/04-system-network/work"
@@ -51,7 +51,7 @@ case "$LAB" in
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/results"
-        echo "Lab 4 reset to its starting state."
+        echo "Core Lab 4 reset to its starting state."
         ;;
     5|05|script|scripting|bash)
         WORK="$ROOT_DIR/05-scripting/work"
@@ -61,20 +61,21 @@ case "$LAB" in
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/scripts" "$WORK/results"
         chmod 0644 "$WORK/logs/"*.log
-        echo "Lab 5 reset to its starting state."
+        echo "Core Lab 5 reset to its starting state."
         ;;
-    7|07|advanced|advanced-scripting)
-        WORK="$ROOT_DIR/07-advanced-scripting/work"
-        SOURCE="$ROOT_DIR/07-advanced-scripting/source"
+    l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
+        WORK="$ROOT_DIR/level-2/03-bash/work"
+        SOURCE="$ROOT_DIR/level-2/03-bash/source"
         rm -rf "$WORK"
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/scripts" "$WORK/results"
         chmod 0644 "$WORK/systems/"*.status
-        echo "Optional Lab 7 reset to its starting state."
+        echo "Level 2 Lab 3 reset to its starting state."
         ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
+        echo "Built Core labs: 1, 2, 3, 4, 5."
+        echo "Built Level 2 labs: l2-3."
         exit 1
         ;;
 esac
