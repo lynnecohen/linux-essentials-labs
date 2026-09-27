@@ -1,0 +1,5 @@
+Northstar deployment notes
+Back up the current release before switching versions.
+List archive contents before restoring them.
+Restore into a safe staging directory first.
+Keep the prior release available for rollback.
