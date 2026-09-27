@@ -2,9 +2,80 @@
 
 Hands-on practice environment for **LPI Linux Essentials 010-160 / WGU D281**.
 
+## Getting a Linux system
+
+These labs need a persistent Linux environment with Bash and standard command-line utilities. A dedicated physical server is **not** required.
+
+### Recommended distribution: Debian
+
+**Debian Stable is the recommended environment** because these labs were developed and tested against Debian and use the GNU/Bash command-line behavior, filesystem layout, and networking tools commonly found there. Debian also maps cleanly to the Debian-family package-management concepts covered by Linux Essentials.
+
+Ubuntu and other Debian-derived distributions should usually work with little or no adjustment. Other mainstream Linux distributions will support most of the commands, but package names, default utilities, service configuration, filesystem contents, and command output can differ.
+
+The labs intentionally avoid depending on a large software stack. The setup scripts check for required commands and report anything missing rather than silently installing packages.
+
+### Low-cost, low-barrier options
+
+| Option | Cost | Barrier | Notes |
+|---|---:|---|---|
+| **Debian virtual machine on an existing computer** | Free | Low | Best general-purpose option. Install Debian in a free hypervisor such as VirtualBox on supported systems or UTM on macOS. The VM is isolated, persistent, and behaves like a normal Linux machine. |
+| **WSL 2 on Windows with Debian** | Free | Very low | Fastest option for many Windows users. Most labs work normally, although process, login-session, kernel, and networking output can look different because Linux is running under WSL rather than as a conventional standalone system. |
+| **Spare or older computer running Debian** | Free if hardware is available | Medium | Provides the most traditional Linux experience. A minimal Debian installation is sufficient; a desktop environment is optional. |
+| **Small Debian cloud VM** | Usually low-cost; provider pricing varies | Low–medium | Useful when no suitable local machine is available or when SSH/server practice is desired. A very small instance is sufficient for these labs. Remember to shut down or delete billable resources when they are no longer needed. |
+| **ChromeOS Linux development environment** | Free on supported Chromebooks | Low | Can provide a usable Debian-based terminal environment, although some system-level behavior may differ from a full standalone Debian installation. |
+
+For a learner who wants the **closest match to the lab environment with no ongoing hosting cost**, a small local Debian virtual machine is the safest default recommendation.
+
+A web-based disposable terminal such as WebTerm Free Play can be useful for isolated command practice, but it should be treated as a supplement rather than the primary lab system. Browser sandboxes may omit system files, utilities, persistent storage, networking behavior, or account/session features used by the full labs.
+
+### Hardware requirements
+
+The labs themselves are lightweight. A minimal command-line Debian installation with roughly **1–2 GB of RAM and several GB of free disk space** is more than sufficient. More resources may make a graphical desktop or VM feel smoother, but they are not required by the exercises.
+
+## Clone the repository
+
+The repository is public, so the lowest-barrier method is HTTPS cloning. First confirm that Git is installed:
+
+```bash
+git --version
+```
+
+If Git is missing on Debian or Ubuntu, install it with:
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+A convenient place to keep the labs is a `labs` directory under the current user's home directory:
+
+```bash
+cd ~
+mkdir -p labs
+cd labs
+git clone https://github.com/lynnecohen/linux-essentials-labs.git
+cd linux-essentials-labs
+```
+
+Because the repository is public, HTTPS cloning does not require a GitHub account.
+
+If SSH authentication with GitHub is already configured, the SSH form can be used instead:
+
+```bash
+git clone git@github.com:lynnecohen/linux-essentials-labs.git
+```
+
+After the initial clone, retrieve later updates from inside the repository with:
+
+```bash
+git pull
+```
+
+The generated `work/` directories used by the labs are ignored by Git, so normal lab activity should not interfere with pulling repository updates.
+
 ## Quick start
 
-Clone the repository to the Debian server, then from the repository root set up the lab you want:
+From the repository root, set up the lab you want:
 
 ```bash
 bash setup.sh 1
