@@ -204,6 +204,72 @@ TEAM=operations     assign a value
 $TEAM               expand/retrieve the value
 ```
 
+### Rules for ordinary variable names
+
+An ordinary shell variable name must:
+
+1. begin with a **letter or underscore**
+2. contain only **letters, numbers, and underscores** after that
+
+Valid examples:
+
+```bash
+report
+report_label
+report2
+_report
+REPORT_LABEL
+```
+
+Invalid examples:
+
+```text
+report-label    hyphen is not allowed
+report label    spaces are not allowed
+report.label    period is not allowed
+2report         cannot begin with a number
+```
+
+For example, this is valid:
+
+```bash
+report_label="night shift"
+```
+
+but this is not a variable assignment:
+
+```bash
+report-label="night shift"
+```
+
+Because `report-label` is not a valid variable name, Bash does not recognize the line as an ordinary assignment and may instead try to interpret it as a command.
+
+Variable names are **case-sensitive**:
+
+```text
+label
+LABEL
+Label
+```
+
+are three different names.
+
+A common shell-script convention is:
+
+```text
+lowercase_with_underscores    ordinary script variables
+UPPERCASE_WITH_UNDERSCORES    environment variables or values treated as constants
+```
+
+This is a convention rather than a syntax requirement, but lowercase names for ordinary script variables also reduce the chance of accidentally colliding with well-known environment variables such as `PATH`, `HOME`, or `USER`.
+
+The no-spaces-around-`=` rule still applies:
+
+```bash
+report_label="night shift"      # valid
+report_label = "night shift"    # not an assignment
+```
+
 ### `$NAME` versus `${NAME}`
 
 Both forms expand the same variable:
@@ -844,7 +910,7 @@ chmod u+x script.sh
 And keep these concepts distinct:
 
 ```text
-NAME=value      assign
+NAME=value      assign; NAME must use letters/numbers/underscores and cannot begin with a number
 $NAME           expand the variable
 ${NAME}         same expansion with an explicit variable-name boundary
 "${NAME}.txt"   quote the resulting filename; braces delimit the name
