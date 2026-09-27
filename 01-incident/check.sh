@@ -32,7 +32,7 @@ fi
 echo
 if [[ $hash_ok -eq 1 && $stderr_ok -eq 1 ]]; then
     echo "All scored Lab 1 artifacts are correct."
-    echo "Finish the exact-recall checkpoint in 01-incident/README.md before moving on."
+    echo "Finish the exact-recall checkpoint in 01-incident/INSTRUCTIONS.md before moving on."
     exit 0
 else
     echo "One or more artifacts need another look."
