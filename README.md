@@ -142,4 +142,4 @@ Use `PROGRESS.md` as a lightweight checkpoint after a lab so later exercises can
 
 ## Safety
 
-Exercises that touch the real Debian server should be read-only or deliberately isolated. Destructive or configuration-changing tasks belong inside the lab workspace, not the production server environment.
+Exercises that touch the host Linux system should be read-only or deliberately isolated. Destructive or configuration-changing tasks belong inside the generated lab workspace, not the host system.
