@@ -14,19 +14,19 @@ case "$LAB" in
     2|02|backup|deployment)
         LAB_ID="2"
         LAB_LABEL="Core Lab 2"
-        LAB_DIR="02-backup-deployment"
+        LAB_DIR="02-backup"
         required_commands=(tar gzip bzip2 xz ln readlink diff cat)
         ;;
     3|03|users|permissions)
         LAB_ID="3"
         LAB_LABEL="Core Lab 3"
-        LAB_DIR="03-users-permissions"
+        LAB_DIR="03-permissions"
         required_commands=(chmod ls id who w last cat less grep head stat)
         ;;
     4|04|system|network)
         LAB_ID="4"
         LAB_LABEL="Core Lab 4"
-        LAB_DIR="04-system-network"
+        LAB_DIR="04-inspection"
         required_commands=(ps top free dmesg ip ss ping cat ls head grep)
         ;;
     5|05|script|scripting|bash)
