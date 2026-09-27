@@ -104,7 +104,7 @@ Current built labs:
 07-advanced-scripting/ Optional Lab 7 — Practical Bash Administration
 ```
 
-Each built lab contains a `READING.md` pre-reading and a `README.md` practical exercise.
+Each built lab uses clearly separated learner materials: `PRE_READING.md` for concept preparation and `INSTRUCTIONS.md` for the hands-on exercise.
 
 When you finish the scored tasks for a lab, run **one checker command for that lab only** from the repository root:
 
