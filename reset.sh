@@ -26,19 +26,19 @@ case "$LAB" in
         echo "Core Lab 2 reset to its starting state."
         ;;
     3|03|users|permissions)
-        WORK="$ROOT_DIR/03-permissions/work"
-        SOURCE="$ROOT_DIR/03-permissions/source"
+        WORK="$ROOT_DIR/03-files/work"
+        SOURCE="$ROOT_DIR/03-files/source"
         rm -rf "$WORK"
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/results"
 
-        chmod 0644 "$WORK/permissions/deploy.sh"
-        chmod 0644 "$WORK/permissions/healthcheck.sh"
-        chmod 0664 "$WORK/permissions/portal.conf"
-        chmod 0644 "$WORK/permissions/secret.key"
-        chmod 0777 "$WORK/permissions/shared-drop"
-        chmod 0644 "$WORK/permissions/shared-drop/README.txt"
+        chmod 0644 "$WORK/files/deploy.sh"
+        chmod 0644 "$WORK/files/healthcheck.sh"
+        chmod 0664 "$WORK/files/portal.conf"
+        chmod 0644 "$WORK/files/secret.key"
+        chmod 0777 "$WORK/files/shared-drop"
+        chmod 0644 "$WORK/files/shared-drop/README.txt"
         chmod 0644 "$WORK/accounts/passwd" "$WORK/accounts/group"
         chmod 0640 "$WORK/accounts/shadow"
 
