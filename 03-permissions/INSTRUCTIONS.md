@@ -38,15 +38,15 @@ bash setup.sh 3
 Then work from:
 
 ```text
-03-permissions/work/
+03-files/work/
 ```
 
-Do not edit files under `03-permissions/source/`; `reset.sh` uses those files to rebuild the workspace.
+Do not edit files under `03-files/source/`; `reset.sh` uses those files to rebuild the workspace.
 
 The generated workspace contains:
 
 ```text
-permissions/
+files/
   deploy.sh
   healthcheck.sh
   portal.conf
@@ -70,13 +70,13 @@ The files under `accounts/` are **sanitized fictional examples**, not copies of 
 
 These orientation tasks are not scored.
 
-1. Use a long listing to inspect the files under `permissions/`.
-2. Use a long directory listing to inspect `permissions/shared-drop/` itself, not only its contents.
+1. Use a long listing to inspect the files under `files/`.
+2. Use a long directory listing to inspect `files/shared-drop/` itself, not only its contents.
 3. For each of the following, state to yourself the owner, group, and other permissions:
-   - `permissions/deploy.sh`
-   - `permissions/healthcheck.sh`
-   - `permissions/portal.conf`
-   - `permissions/secret.key`
+   - `files/deploy.sh`
+   - `files/healthcheck.sh`
+   - `files/portal.conf`
+   - `files/secret.key`
 4. Identify the first character in the long listing for:
    - a regular file
    - the `shared-drop` directory
@@ -91,7 +91,7 @@ These tasks are scored. The checker validates the resulting permission state, no
 
 ### 1. Owner execute permission
 
-`permissions/deploy.sh` starts as a normal non-executable text file.
+`files/deploy.sh` starts as a normal non-executable text file.
 
 Using **symbolic chmod syntax**, add execute permission for the **owner only** while preserving all existing permissions.
 
@@ -100,7 +100,7 @@ Using **symbolic chmod syntax**, add execute permission for the **owner only** w
 Set:
 
 ```text
-permissions/healthcheck.sh
+files/healthcheck.sh
 ```
 
 to numeric mode:
@@ -113,7 +113,7 @@ Before running the command, mentally translate 755 into owner/group/other rwx pe
 
 ### 3. Remove group write
 
-`permissions/portal.conf` begins with group write permission enabled.
+`files/portal.conf` begins with group write permission enabled.
 
 Using **symbolic chmod syntax**, remove write permission from the group while leaving the other bits alone.
 
@@ -122,7 +122,7 @@ Using **symbolic chmod syntax**, remove write permission from the group while le
 Set:
 
 ```text
-permissions/secret.key
+files/secret.key
 ```
 
 to numeric mode:
@@ -135,7 +135,7 @@ Confirm with a long listing that only the owner has read/write access.
 
 ### 5. Protect the shared drop directory with the sticky bit
 
-`permissions/shared-drop/` begins writable by owner, group, and other.
+`files/shared-drop/` begins writable by owner, group, and other.
 
 Add the **sticky bit** while preserving the existing ordinary permissions. The final numeric mode should be equivalent to:
 
