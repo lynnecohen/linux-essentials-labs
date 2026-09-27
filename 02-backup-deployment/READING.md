@@ -1,6 +1,6 @@
 # Lab 2 Pre-Reading — Archives, Compression, Restore, and Symbolic Links
 
-Read this before starting **Lab 2 — Backup, Restore & Deployment**. Lab 1 showed that your text-processing syntax is now comfortable, so this reading concentrates on the areas that still need deliberate reinforcement: `tar` modes, compression flags, archive/restore workflow, and symbolic-link behavior.
+Read this before starting **Lab 2 — Backup, Restore & Deployment**. This reading concentrates on `tar` modes, compression flags, archive/restore workflow, and symbolic-link behavior. Text-processing skills from Lab 1 may appear incidentally, but they are not the main focus here.
 
 The core mental model is:
 
@@ -132,7 +132,7 @@ tar
 project/        item to put inside the archive
 ```
 
-This distinction caused some uncertainty earlier, so it is worth being precise: `tar` does not infer that `backup.tar` is the output filename merely because it looks like one. `-f` tells `tar` that the associated argument is the archive file.
+This distinction is worth making explicit: `tar` does not infer that `backup.tar` is the output filename merely because it looks like one. `-f` tells `tar` that the associated argument is the archive file.
 
 When short options are combined, you commonly see:
 
@@ -366,7 +366,7 @@ zip      create/update ZIP archives
 unzip    extract ZIP archives
 ```
 
-For this exam-prep lab, recognition of `zip`/`unzip` is more important than learning a large set of ZIP options.
+For Linux Essentials v1.6 preparation, recognition of `zip`/`unzip` is more important than learning a large set of ZIP options.
 
 ---
 
@@ -522,7 +522,7 @@ The Lab 2 scenario uses this pattern because it gives symbolic links a realistic
 
 ## 13. What carries forward from Lab 1
 
-Your Lab 1 exact-recall checkpoint showed that the following are now comfortable:
+Lab 2 assumes familiarity with the core text-processing tools introduced in Lab 1:
 
 ```text
 wc -l
