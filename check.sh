@@ -18,7 +18,7 @@ case "$LAB" in
         exec bash "$ROOT_DIR/04-inspection/check.sh"
         ;;
     5|05|script|scripting|bash)
-        exec bash "$ROOT_DIR/05-scripting/check.sh"
+        exec bash "$ROOT_DIR/05-bash/check.sh"
         ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
         exec bash "$ROOT_DIR/level-2/03-bash/check.sh"
