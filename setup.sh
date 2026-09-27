@@ -30,9 +30,14 @@ case "$LAB" in
         LAB_DIR="05-scripting"
         required_commands=(bash chmod grep cat less)
         ;;
+    7|07|advanced|advanced-scripting)
+        LAB_NUMBER=7
+        LAB_DIR="07-advanced-scripting"
+        required_commands=(bash chmod grep cat less hostname)
+        ;;
     *)
-        echo "Built labs: 1, 2, 3, 4, and 5."
-        echo "Usage: bash setup.sh 1|2|3|4|5"
+        echo "Built labs: 1, 2, 3, 4, 5, and optional 7."
+        echo "Usage: bash setup.sh 1|2|3|4|5|7"
         exit 1
         ;;
 esac
