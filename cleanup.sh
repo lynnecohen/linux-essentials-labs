@@ -10,15 +10,15 @@ case "$LAB" in
         echo "Core Lab 1 generated workspace removed."
         ;;
     2|02|backup|deployment)
-        rm -rf "$ROOT_DIR/02-backup-deployment/work"
+        rm -rf "$ROOT_DIR/02-backup/work"
         echo "Core Lab 2 generated workspace removed."
         ;;
     3|03|users|permissions)
-        rm -rf "$ROOT_DIR/03-users-permissions/work"
+        rm -rf "$ROOT_DIR/03-permissions/work"
         echo "Core Lab 3 generated workspace removed."
         ;;
     4|04|system|network)
-        rm -rf "$ROOT_DIR/04-system-network/work"
+        rm -rf "$ROOT_DIR/04-inspection/work"
         echo "Core Lab 4 generated workspace removed."
         ;;
     5|05|script|scripting|bash)
