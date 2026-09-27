@@ -86,7 +86,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Lab 4 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 04-system-network/README.md."
+    echo "Finish the exact-recall checkpoint in 04-system-network/INSTRUCTIONS.md."
     exit 0
 else
     echo "One or more Lab 4 outcomes need another look."
