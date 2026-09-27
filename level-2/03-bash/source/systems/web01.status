@@ -1,0 +1,4 @@
+name=web01
+service=running
+disk=72
+errors=0
