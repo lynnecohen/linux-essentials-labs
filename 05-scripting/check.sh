@@ -152,7 +152,7 @@ echo "Result: $pass_count passed, $fail_count failed, $warn_count warnings"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Lab 5 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 05-scripting/README.md."
+    echo "Finish the exact-recall checkpoint in 05-scripting/INSTRUCTIONS.md."
     exit 0
 else
     echo "One or more Lab 5 outcomes need another look."
