@@ -39,7 +39,7 @@ case "$LAB" in
         LAB_ID="6"
         LAB_LABEL="Core Lab 6"
         LAB_DIR="06-capstone"
-        required_commands=(bash grep cut sort wc head tail tar ln readlink chmod stat cat less id ps top free ip ss who w last cmp tr)
+        required_commands=(bash grep cut sort wc head tail tar ln readlink chmod stat cat less id ps top free dmesg ip ss who w last cmp tr)
         ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
         LAB_ID="l2-3"
@@ -80,4 +80,10 @@ if [[ "$LAB_ID" == "4" ]] && ! command -v host >/dev/null 2>&1; then
     echo
     echo "Note: 'host' is not installed on this system."
     echo "Core Lab 4 treats the DNS lookup exercise as environment-dependent; do not install extra software solely for the lab."
+fi
+
+if [[ "$LAB_ID" == "6" ]] && ! command -v host >/dev/null 2>&1; then
+    echo
+    echo "Note: 'host' is not installed on this system."
+    echo "Core Lab 6 still expects you to know the Linux Essentials DNS command association; do not install extra software solely for the capstone."
 fi
