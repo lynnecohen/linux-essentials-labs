@@ -6,7 +6,7 @@ Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, l
 
 ## Project status
 
-**Linux Essentials 010-160 Core: Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian. Learner testing may still prompt refinements, but the Core curriculum has a defined, complete finish line.
+**Linux Essentials 010-160 Core v1.0: Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian. Learner testing may still prompt refinements, but the Core curriculum has a defined, complete finish line.
 
 ## Repository structure
 
