@@ -468,6 +468,8 @@ bash reset.sh l2-3
 19. Why does this lab use `#!/bin/bash` instead of `#!/bin/sh`?
 20. Name one reason to check a file with `[[ -f "$FILE" ]]` before operating on it.
 
+After attempting all twenty questions from memory, compare your responses with **[Level 2 Lab 3 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
 This lab is deliberately broader than the exam-focused scripting lab. The goal is practical literacy: being able to read, modify, and write small Bash utilities that validate inputs, make decisions, process files, and report failures predictably.
