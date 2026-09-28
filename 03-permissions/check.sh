@@ -74,7 +74,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Lab 3 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 03-files/INSTRUCTIONS.md."
+    echo "Finish the exact-recall checkpoint in 03-permissions/INSTRUCTIONS.md, then check 03-permissions/ANSWERS.md."
     exit 0
 else
     echo "One or more Lab 3 outcomes need another look."
