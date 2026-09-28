@@ -287,19 +287,26 @@ Here:
 
 That is why regex `*` is fundamentally different from glob `*`: regex `*` modifies the expression immediately before it.
 
-### What about `grep -E`?
+### The regex `?` and `grep -E`
 
-`grep -E` uses **extended regular expressions (ERE)**. In ERE, `?` becomes a quantifier meaning "the preceding item is optional" (zero or one occurrence).
+Linux Essentials v1.6 explicitly expects recognition of `?` as a regular-expression multiplier meaning **zero or one of the preceding pattern**.
 
-For example:
+With GNU `grep`, the clearest form for that syntax is an **extended regular expression (ERE)** selected with `-E`:
 
-```text
-colou?r
+```bash
+grep -E 'colou?r' words.txt
 ```
 
-matches both `color` and `colour` under ERE.
+The pattern can match both:
 
-`grep -E` is useful real-world Linux knowledge, but it is not a deliberate memorization target for this v1.6 lab plan. The important exam-prep distinction here is **shell globbing versus text regex matching**.
+```text
+color
+colour
+```
+
+This is different from a **shell glob**, where `?` means exactly one arbitrary filename character.
+
+One technical detail matters: default GNU `grep` uses **basic regular expressions (BRE)**, where a plain `?` is normally treated literally. The zero-or-one meaning is available directly as `?` in ERE. For this Core track, retain the **regex meaning of `?` = zero or one** and the glob-versus-regex distinction; extensive `grep -E` practice is not required.
 
 ### Quoting and expansion
 
