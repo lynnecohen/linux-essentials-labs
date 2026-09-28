@@ -19,11 +19,11 @@ fail() {
     fail_count=$((fail_count + 1))
 }
 
-echo "Level B Lab 3 — checking practical Bash administration"
+echo "B3 — checking practical Bash administration"
 echo
 
 if [[ ! -d "$WORK" ]]; then
-    echo "Level B Lab 3 workspace not found. Run: bash setup.sh b3"
+    echo "B3 workspace not found. Run: bash setup.sh b3"
     exit 1
 fi
 
@@ -205,10 +205,10 @@ echo
 echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
-    echo "All scored Level B Lab 3 outcomes are correct."
+    echo "All scored B3 outcomes are correct."
     echo "Finish the exact-recall checkpoint in level-b/03-bash/INSTRUCTIONS.md, then check level-b/03-bash/ANSWERS.md."
     exit 0
 else
-    echo "One or more Level B Lab 3 outcomes need another look."
+    echo "One or more B3 outcomes need another look."
     exit 1
 fi
