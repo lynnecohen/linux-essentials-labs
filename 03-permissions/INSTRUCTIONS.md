@@ -4,9 +4,9 @@
 
 The fictional **Northstar Learning Portal** is preparing a shared administration workspace. Several files have overly broad permissions, two maintenance scripts are not executable in the intended way, and a shared drop directory needs the protection normally associated with a multi-user temporary directory.
 
-At the same time, you need to inspect the real Prometheus server's current login/session information and review the Linux account databases without modifying production accounts.
+At the same time, you will inspect the host Linux system's current login/session information and review account databases without modifying real accounts.
 
-Labs 1 and 2 showed good retention of text-processing and archive syntax. Those skills may recur incidentally, but Lab 3 deliberately concentrates on permissions, users/groups, sessions, account files, and the distinctions that previously required more reinforcement.
+Skills from Labs 1 and 2 may recur incidentally, but Lab 3 deliberately concentrates on permissions, users/groups, sessions, and account files.
 
 ## Primary practice targets
 
@@ -38,10 +38,10 @@ bash setup.sh 3
 Then work from:
 
 ```text
-03-files/work/
+03-permissions/work/
 ```
 
-Do not edit files under `03-files/source/`; `reset.sh` uses those files to rebuild the workspace.
+Do not edit files under `03-permissions/source/`; `reset.sh` uses those files to rebuild the workspace.
 
 The generated workspace contains:
 
@@ -62,7 +62,7 @@ accounts/
 results/
 ```
 
-The files under `accounts/` are **sanitized fictional examples**, not copies of Prometheus account secrets.
+The files under `accounts/` are **sanitized fictional examples**, not copies of the host system's account secrets.
 
 ---
 
@@ -153,7 +153,7 @@ Do not remove the directory or its README file.
 
 ---
 
-## Part C — Inspect your identity and active sessions on Prometheus
+## Part C — Inspect your identity and active sessions
 
 These tasks are read-only and are not scored because session output depends on the current server state.
 
@@ -180,7 +180,7 @@ First inspect the real server **read-only**:
 
 1. Display a few lines from `/etc/passwd`.
 2. Display a few lines from `/etc/group`.
-3. Use `ls -l /etc/shadow` to inspect its permissions. Do **not** copy or display Prometheus password hashes for this exercise.
+3. Use `ls -l /etc/shadow` to inspect its permissions. Do **not** copy or display password hashes from the host system for this exercise.
 
 Then inspect the sanitized examples in:
 
@@ -214,7 +214,7 @@ This is intentionally a recognition check, not a detailed shadow-field exercise.
 
 ---
 
-## Part E — Account-administration syntax without changing Prometheus
+## Part E — Account-administration syntax without changing the host
 
 The following commands can modify real system account state, so **do not execute them** for this lab.
 
@@ -290,6 +290,8 @@ Do this **after** the practical tasks, without looking back at the reading if po
 13. At a high level, how does `sudo COMMAND` differ from `su - USER`?
 14. What is the conventional difference between `/tmp` and `/var/tmp`?
 
+After attempting all fourteen questions from memory, compare your responses with **[Lab 3 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
-When the practical work and recall checkpoint are complete, review which distinctions were automatic and which required a lookup. Lab 4 will use that evidence while shifting deliberate practice toward system and network inspection.
+Before moving to Lab 4, note any permission, session, account-file, or privilege-switching concepts that still required a lookup. Revisit only those items, then continue with the next Core lab.
