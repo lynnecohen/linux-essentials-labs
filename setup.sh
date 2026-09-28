@@ -41,16 +41,9 @@ case "$LAB" in
         LAB_DIR="06-capstone"
         required_commands=(bash grep cut sort wc head tail tar ln readlink chmod stat cat less id ps top free dmesg ip ss who w last cmp tr)
         ;;
-    l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
-        LAB_ID="l2-3"
-        LAB_LABEL="Level 2 Lab 3"
-        LAB_DIR="level-2/03-bash"
-        required_commands=(bash chmod grep cat less hostname)
-        ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
-        echo "Built Level 2 labs: l2-3."
-        echo "Usage: bash setup.sh 1|2|3|4|5|6|l2-3"
+        echo "Usage: bash setup.sh 1|2|3|4|5|6"
         exit 1
         ;;
 esac
