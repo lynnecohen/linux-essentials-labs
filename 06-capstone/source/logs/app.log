@@ -1,0 +1,6 @@
+2026-09-27T18:01:02 INFO portal starting
+2026-09-27T18:01:14 ERROR database timeout after 30s
+2026-09-27T18:01:16 DEBUG Error simulation marker for health probe
+2026-09-27T18:02:03 WARN cache entry stale
+2026-09-27T18:02:47 error payment service unavailable
+2026-09-27T18:03:10 INFO request processing resumed
