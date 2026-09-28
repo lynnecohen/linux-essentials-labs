@@ -816,4 +816,4 @@ ln -s               symbolic link
 
 ## Scope guard
 
-The Core review does not require broader Level 2 material such as advanced Bash branching/functions, detailed package administration, SSH administration, systemd service management, `sed`, `awk`, or other post-Core topics merely because they are useful in practice.
+The Core review does not require post-Core material such as advanced Bash branching/functions, detailed package administration, SSH administration, systemd service management, `sed`, `awk`, or other broader Linux topics merely because they are useful in practice.
