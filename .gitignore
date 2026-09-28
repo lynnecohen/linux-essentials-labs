@@ -6,6 +6,9 @@
 05-bash/work/
 06-capstone/work/
 
+# Generated Level B workspaces
+level-b/03-bash/work/
+
 # Common editor/temp files
 *~
 *.swp
