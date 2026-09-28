@@ -1,0 +1,1 @@
+Shared handoff drop directory.
