@@ -210,7 +210,7 @@ Make a disposable copy of `notes/deploy.txt` somewhere under `restore/`. Compres
 
 This task is not checked. Its purpose is simply to connect the `z` in tar with the standalone gzip/gunzip utilities.
 
-If `zip` and `unzip` are installed on Prometheus, you may also create and extract a small ZIP archive as optional practice. Do not install additional software solely for this optional step.
+If `zip` and `unzip` are installed on your Linux system, you may also create and extract a small ZIP archive as optional practice. Do not install additional software solely for this optional step.
 
 ---
 
@@ -284,6 +284,8 @@ Do this **after** the practical tasks, without using the reading if possible.
 9. Write the general syntax for creating a symbolic link named `current` that points to `release-2`.
 10. If `current -> release-2` is a relative symbolic link located inside `releases/`, explain what directory the relative target is resolved from and what happens to `release-2` if only the `current` link is deleted.
 
+After attempting all ten questions from memory, compare your responses with **[Lab 2 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
-When Lab 2 and the exact-recall checkpoint are complete, report which tar combinations were automatic, which required thought, and whether `j` versus `J` or `c/x/t` caused any hesitation. Lab 3 will be tuned around that evidence rather than blindly repeating everything.
+Before moving to Lab 3, note any tar flags, compression formats, or symbolic-link concepts that still required a lookup. Revisit only those items, then continue with the next Core lab.
