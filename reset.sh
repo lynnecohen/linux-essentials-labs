@@ -99,7 +99,7 @@ EOF
         cp -a "$SOURCE/." "$WORK/"
         mkdir -p "$WORK/scripts" "$WORK/results"
         chmod 0644 "$WORK/systems/"*.status
-        echo "Level B Lab 3 reset to its starting state."
+        echo "B3 reset to its starting state."
         ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
