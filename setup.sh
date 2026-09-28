@@ -15,7 +15,7 @@ case "$LAB" in
         LAB_ID="2"
         LAB_LABEL="Core Lab 2"
         LAB_DIR="02-backup"
-        required_commands=(tar gzip bzip2 xz ln readlink diff cat)
+        required_commands=(tar gzip bzip2 xz ln readlink diff cat grep sed)
         ;;
     3|03|users|permissions)
         LAB_ID="3"
@@ -33,7 +33,7 @@ case "$LAB" in
         LAB_ID="5"
         LAB_LABEL="Core Lab 5"
         LAB_DIR="05-bash"
-        required_commands=(bash chmod grep cat less)
+        required_commands=(bash chmod grep cat less head tail)
         ;;
     6|06|capstone)
         LAB_ID="6"
