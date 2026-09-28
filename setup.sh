@@ -43,7 +43,7 @@ case "$LAB" in
         ;;
     b3|B3)
         LAB_ID="b3"
-        LAB_LABEL="Level B Lab 3"
+        LAB_LABEL="B3"
         LAB_DIR="level-b/03-bash"
         required_commands=(bash chmod grep cat less hostname)
         ;;
