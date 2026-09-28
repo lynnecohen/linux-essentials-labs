@@ -6,12 +6,6 @@
 05-bash/work/
 06-capstone/work/
 
-# Generated Level 2 workspaces
-level-2/03-bash/work/
-
-# Legacy generated workspace from the pre-Level-2 layout
-07-advanced-scripting/work/
-
 # Common editor/temp files
 *~
 *.swp
