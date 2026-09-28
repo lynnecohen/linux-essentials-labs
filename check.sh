@@ -23,13 +23,9 @@ case "$LAB" in
     6|06|capstone)
         exec bash "$ROOT_DIR/06-capstone/check.sh"
         ;;
-    l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
-        exec bash "$ROOT_DIR/level-2/03-bash/check.sh"
-        ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
-        echo "Built Level 2 labs: l2-3."
-        echo "Usage: bash check.sh 1|2|3|4|5|6|l2-3"
+        echo "Usage: bash check.sh 1|2|3|4|5|6"
         exit 1
         ;;
 esac
