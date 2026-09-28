@@ -1,4 +1,4 @@
-# Level B Lab 3 — Exact-Recall Answer Key
+# B3 — Exact-Recall Answer Key
 
 Use this **after** completing the exact-recall checkpoint in `INSTRUCTIONS.md`.
 
