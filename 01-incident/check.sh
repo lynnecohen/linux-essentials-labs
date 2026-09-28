@@ -15,10 +15,23 @@ cd "$WORK" || exit 1
 echo "Lab 1 — checking required output files"
 echo
 
-hash_ok=0
-if sha256sum -c "$EXPECTED"; then
-    hash_ok=1
-fi
+hash_ok=1
+
+while read -r expected_hash file; do
+    if [[ ! -f "$file" ]]; then
+        echo "$file: FAILED — missing"
+        hash_ok=0
+        continue
+    fi
+
+    actual_hash="$(sha256sum "$file" | cut -d' ' -f1)"
+    if [[ "$actual_hash" == "$expected_hash" ]]; then
+        echo "$file: OK"
+    else
+        echo "$file: FAILED — content does not match"
+        hash_ok=0
+    fi
+done < "$EXPECTED"
 
 echo
 stderr_ok=0
