@@ -168,6 +168,40 @@ The **Core** track and **Level 2** track are separate. Completing or expanding L
 
 ---
 
+## Lab 6 — Capstone
+
+**Completed:**
+
+**Deployment/archive recovery that felt automatic:**
+
+-
+
+**Permission fixes that felt automatic:**
+
+-
+
+**Text/data processing that felt automatic:**
+
+-
+
+**System/network/session command associations that felt automatic:**
+
+-
+
+**Bash scripting pieces that still required a lookup:**
+
+-
+
+**Exact-recall items to carry into final Knowledge Review:**
+
+-
+
+**Overall capstone result / checker notes:**
+
+-
+
+---
+
 # Level 2 — Practical Linux
 
 ## Lab 3 — Practical Bash Administration
