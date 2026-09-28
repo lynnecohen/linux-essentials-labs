@@ -168,3 +168,38 @@ This file is a **learner template**. Replace the blank prompts with your own not
 
 -
 
+---
+
+# Level B — Practical Linux
+
+## B3 — Practical Bash Administration
+
+**Completed:**
+
+**Conditionals/tests that felt automatic:**
+
+-
+
+**Looping/parsing syntax that required a lookup:**
+
+-
+
+**Functions and return/exit behavior:**
+
+-
+
+**Command substitution and arithmetic expansion:**
+
+-
+
+**Argument handling (`$#`, `"$@"`, `shift`):**
+
+-
+
+**Exact-recall questions missed:**
+
+-
+
+**Items to revisit in later Level B work:**
+
+-
