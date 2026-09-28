@@ -126,10 +126,13 @@ cat > "$EXPECTED_MAP" <<'EOF'
 process-snapshot=ps
 process-live=top
 memory=free
+kernel-messages=dmesg
 addresses=ip addr show
 routes=ip route show
 dns=host
 sockets=ss
+hosts-file=/etc/hosts
+resolver-file=/etc/resolv.conf
 current-users=who
 user-activity=w
 login-history=last
