@@ -2,7 +2,7 @@
 set -u
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
-LAB="${1:-1}"
+LAB="${1:-}"
 
 case "$LAB" in
     1|01|incident)
