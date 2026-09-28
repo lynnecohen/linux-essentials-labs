@@ -91,20 +91,9 @@ EOF
 
         echo "Core Lab 6 reset to its starting state."
         ;;
-    l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
-        WORK="$ROOT_DIR/level-2/03-bash/work"
-        SOURCE="$ROOT_DIR/level-2/03-bash/source"
-        rm -rf "$WORK"
-        mkdir -p "$WORK"
-        cp -a "$SOURCE/." "$WORK/"
-        mkdir -p "$WORK/scripts" "$WORK/results"
-        chmod 0644 "$WORK/systems/"*.status
-        echo "Level 2 Lab 3 reset to its starting state."
-        ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
-        echo "Built Level 2 labs: l2-3."
-        echo "Usage: bash reset.sh 1|2|3|4|5|6|l2-3"
+        echo "Usage: bash reset.sh 1|2|3|4|5|6"
         exit 1
         ;;
 esac
