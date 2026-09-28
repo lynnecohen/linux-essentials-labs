@@ -147,6 +147,8 @@ grep -r    search recursively
 grep -c    count matching lines
 ```
 
+In an extended regular expression, `?` means **zero or one occurrence of the preceding pattern**. In a shell glob, `?` means **exactly one arbitrary filename character**.
+
 ### 22
 
 ```text
