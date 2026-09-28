@@ -1,4 +1,4 @@
-# Level B Lab 3 Pre-Reading — Practical Bash Administration
+# B3 Pre-Reading — Practical Bash Administration
 
 This Level B lab goes beyond the **Linux Essentials 010-160 / Lab 5 core scripting scope** and introduces Bash constructs that are common in real Linux administration scripts.
 
