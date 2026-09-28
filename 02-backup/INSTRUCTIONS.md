@@ -6,7 +6,7 @@ The fictional **Northstar Learning Portal** is preparing to deploy release `2026
 
 Before changing the active release, you need to create and verify backups, practice restoring them into safe staging directories, compare several Linux compression formats, and then switch the deployment symlink to the new release.
 
-Lab 1 showed that your `grep`, `cut`, `wc`, `head`/`tail`, pipelines, and redirection syntax are now comfortable. Those skills may appear incidentally, but this lab deliberately shifts its practice time toward the archive/compression syntax that still needs reinforcement.
+Text-processing skills from Lab 1 may appear incidentally, but this lab deliberately shifts its practice time toward archives, compression, restore workflows, and symbolic links.
 
 ## Primary practice targets
 
