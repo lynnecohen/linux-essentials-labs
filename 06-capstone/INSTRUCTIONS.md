@@ -331,6 +331,8 @@ Complete these **after** the practical work, without looking back at prior labs 
 23. Write a basic `for ... do ... done` loop from memory.
 24. What exit status conventionally means success?
 
+After attempting all twenty-four questions from memory, compare your responses with **[Core Lab 6 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Completion point
 
 Finishing this lab completes the **hands-on Core lab sequence**.
