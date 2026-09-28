@@ -1,4 +1,4 @@
-# Level B Lab 3 — Practical Bash Administration
+# B3 — Practical Bash Administration
 
 ## Status of this lab
 
@@ -40,7 +40,7 @@ Everything operates inside the generated lab workspace. No real services, accoun
 
 ## Pre-reading
 
-Read **[Level B Lab 3 Pre-Reading — Practical Bash Administration](PRE_READING.md)** before starting.
+Read **[B3 Pre-Reading — Practical Bash Administration](PRE_READING.md)** before starting.
 
 ## Setup
 
@@ -468,7 +468,7 @@ bash reset.sh b3
 19. Why does this lab use `#!/bin/bash` instead of `#!/bin/sh`?
 20. Name one reason to check a file with `[[ -f "$FILE" ]]` before operating on it.
 
-After attempting all twenty questions from memory, compare your responses with **[Level B Lab 3 Exact-Recall Answer Key](ANSWERS.md)**.
+After attempting all twenty questions from memory, compare your responses with **[B3 Exact-Recall Answer Key](ANSWERS.md)**.
 
 ## Stop point
 
