@@ -206,7 +206,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Level 2 Lab 3 outcomes are correct."
-    echo "Finish the exact-recall checkpoint in level-2/03-bash/INSTRUCTIONS.md."
+    echo "Finish the exact-recall checkpoint in level-2/03-bash/INSTRUCTIONS.md, then check level-2/03-bash/ANSWERS.md."
     exit 0
 else
     echo "One or more Level 2 Lab 3 outcomes need another look."
