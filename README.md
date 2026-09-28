@@ -8,7 +8,7 @@ Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, l
 
 This repository has two separate completion tracks:
 
-- **Core — Linux Essentials 010-160:** In development. Core Labs 1–5 are built. The Core Capstone and Knowledge Review are the remaining planned pieces before the Core track is considered complete.
+- **Core — Linux Essentials 010-160:** In development. Core Labs 1–6, including the Capstone, are built. The Knowledge Review is the remaining planned piece before the Core track is considered complete.
 - **Level 2 — Practical Linux:** Expanding. This optional track continues beyond the certification core and can grow independently after the Core track is complete.
 
 Level 2 is a repository difficulty label. It does **not** mean LPI Linux Essentials version 2.0.
@@ -18,12 +18,12 @@ The separation is intentional: future Level 2 additions should not make the comp
 ## Repository structure
 
 ```text
-01-incident/             Core Lab 1 — Production Incident Investigation
-02-backup/    Core Lab 2 — Backup, Restore & Deployment
-03-permissions/    Core Lab 3 — Users, Sessions & Permissions
-04-inspection/       Core Lab 4 — System & Network Inspection
-05-bash/            Core Lab 5 — Bash Automation
-06-capstone/             Core Lab 6 — Capstone
+01-incident/      Core Lab 1 — Production Incident Investigation
+02-backup/        Core Lab 2 — Backup, Restore & Deployment
+03-permissions/   Core Lab 3 — Users, Sessions & Permissions
+04-inspection/    Core Lab 4 — System & Network Inspection
+05-bash/          Core Lab 5 — Bash Automation
+06-capstone/      Core Lab 6 — Capstone
 review/                  Core knowledge-review material
 
 level-2/
@@ -126,9 +126,8 @@ Currently built Core lab IDs are:
 3
 4
 5
+6
 ```
-
-The Core Capstone will use ID `6` after it is built.
 
 Level 2 uses an explicit track prefix so its numbering cannot be confused with the Core sequence. The currently built Level 2 module is:
 
@@ -182,7 +181,7 @@ The sequence is:
 6. **Capstone** — independent diagnosis, tool selection, remediation, and verification across prior labs
 7. **Knowledge Review** — non-lab objectives and recognition material that do not justify a full terminal scenario
 
-The Capstone is the practical endpoint. The Knowledge Review closes remaining objective coverage that is better tested by recognition and recall than by artificial hands-on exercises.
+The Capstone is the practical endpoint and is now built. The Knowledge Review closes remaining objective coverage that is better tested by recognition and recall than by artificial hands-on exercises.
 
 ## Level 2 — Practical Linux
 
