@@ -179,6 +179,8 @@ grep -r
 grep -c
 ```
 
+Then state what `?` means in an extended regular expression and how that differs from shell-glob `?`.
+
 ### 22
 State what each shell operator does:
 
