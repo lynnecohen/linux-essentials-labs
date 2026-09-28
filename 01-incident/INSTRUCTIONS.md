@@ -220,8 +220,9 @@ Do this **after** the practical tasks, without looking back at previous answers 
 6. Extract field 3 from a comma-delimited file named `example.csv`.
 7. Explain when `>` and `>>` behave differently.
 8. Explain what `2>` redirects.
+9. In an extended regular expression, what does `?` mean? How does that differ from shell-glob `?`?
 
-After attempting all eight questions from memory, compare your responses with **[Lab 1 Exact-Recall Answer Key](ANSWERS.md)**.
+After attempting all nine questions from memory, compare your responses with **[Lab 1 Exact-Recall Answer Key](ANSWERS.md)**.
 
 ## Stop point
 
