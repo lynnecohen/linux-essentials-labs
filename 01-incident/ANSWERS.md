@@ -46,3 +46,5 @@ Equivalent commands are acceptable when they produce the requested result.
 7. `>` redirects standard output and overwrites/truncates the destination file; `>>` redirects standard output and appends to the destination.
 
 8. `2>` redirects **standard error (stderr)**, conventionally file descriptor 2.
+
+9. In an extended regular expression, `?` means **zero or one occurrence of the preceding pattern**. In a shell glob, `?` means **exactly one arbitrary filename character**.
