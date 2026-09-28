@@ -32,4 +32,4 @@ Official objectives:
 
 https://www.lpi.org/our-certifications/exam-010-objectives/
 
-Topics deliberately assigned to the optional `level-2/` track are not required here merely because they are useful Linux skills.
+Useful Linux topics outside the 010-160 Core scope are not required here merely because they are practical.
