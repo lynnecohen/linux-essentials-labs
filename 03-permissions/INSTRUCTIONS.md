@@ -155,7 +155,7 @@ Do not remove the directory or its README file.
 
 ## Part C — Inspect your identity and active sessions
 
-These tasks are read-only and are not scored because session output depends on the current server state.
+These tasks are read-only and are not scored because session output depends on the current host state.
 
 Run each command separately and compare what it tells you:
 
@@ -176,7 +176,7 @@ The checker only verifies that it looks like `id` output; it does not expect any
 
 ## Part D — Inspect Linux account files safely
 
-First inspect the real server **read-only**:
+First inspect the host Linux system **read-only**:
 
 1. Display a few lines from `/etc/passwd`.
 2. Display a few lines from `/etc/group`.
