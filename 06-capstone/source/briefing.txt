@@ -1,0 +1,25 @@
+NORTHSTAR DEPLOYMENT HANDOFF
+
+Target active release: 2026.09.24
+
+Configuration:
+- The live portal configuration may have been left in the wrong environment.
+- A known-good production copy is stored in backups/config.tar.gz.
+
+Permissions:
+- files/healthcheck.sh must be directly executable by its owner.
+- files/deploy.key must be owner read/write only.
+- files/shared-drop is intentionally world-writable, but it must use the shared-directory protection that prevents users from deleting or renaming one another's files.
+
+Incident packet:
+- Retain operational error lines, not DEBUG diagnostic noise.
+- Count timeout lines across current and archived logs.
+- Identify active support users.
+- Report the three slowest response-time values.
+
+System handoff:
+- Leave a compact map of the Linux commands used for basic process, memory, network, DNS, socket, and session inspection.
+- Save current UID/GID/group information.
+
+Automation:
+- Leave a directly executable Bash handoff script using only the Core scripting constructs.
