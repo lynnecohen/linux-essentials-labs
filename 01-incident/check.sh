@@ -6,7 +6,7 @@ WORK="$LAB_DIR/work"
 EXPECTED="$LAB_DIR/.expected.sha256"
 
 if [[ ! -d "$WORK" ]]; then
-    echo "Lab 1 workspace not found. Run: bash setup.sh"
+    echo "Lab 1 workspace not found. Run: bash setup.sh 1"
     exit 1
 fi
 
@@ -32,7 +32,7 @@ fi
 echo
 if [[ $hash_ok -eq 1 && $stderr_ok -eq 1 ]]; then
     echo "All scored Lab 1 artifacts are correct."
-    echo "Finish the exact-recall checkpoint in 01-incident/INSTRUCTIONS.md before moving on."
+    echo "Finish the exact-recall checkpoint in 01-incident/INSTRUCTIONS.md, then check 01-incident/ANSWERS.md."
     exit 0
 else
     echo "One or more artifacts need another look."
