@@ -31,7 +31,7 @@ case "$LAB" in
         ;;
     b3|B3)
         rm -rf "$ROOT_DIR/level-b/03-bash/work"
-        echo "Level B Lab 3 generated workspace removed."
+        echo "B3 generated workspace removed."
         ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
