@@ -2,7 +2,7 @@
 set -u
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
-LAB="${1:-1}"
+LAB="${1:-}"
 
 case "$LAB" in
     1|01|incident)
@@ -38,6 +38,7 @@ case "$LAB" in
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
         echo "Built Level 2 labs: l2-3."
+        echo "Usage: bash cleanup.sh 1|2|3|4|5|6|l2-3"
         exit 1
         ;;
 esac
