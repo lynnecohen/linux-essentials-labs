@@ -1,0 +1,4 @@
+2026-09-26T23:44:01 INFO prior deployment starting
+2026-09-26T23:44:19 ERROR timeout contacting database
+2026-09-26T23:44:22 DEBUG ERROR synthetic probe result
+2026-09-26T23:45:09 error worker crashed
