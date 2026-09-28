@@ -433,7 +433,7 @@ host = Linux Essentials DNS lookup target
 
 `dig example.com` is also a valid real-world DNS query, but `dig` is outside the required v1.6 track for this project. When answering a Linux Essentials recall question that asks for the basic DNS lookup command covered by this lab, use `host` rather than substituting another DNS utility.
 
-Some minimal Debian installations may not have `host` installed. If it is unavailable, do not treat that as a syntax failure. Exact recall can still be practiced, and a disposable sandbox such as **WebTerm Free Play** may be used if it exposes `host`. Do not install extra software solely to satisfy this lab.
+Some minimal Debian installations may not have `host` installed. If it is unavailable, do not treat that as a syntax failure. Exact recall can still be practiced, and a disposable Linux sandbox may be used if it exposes `host`. Do not install extra software solely to satisfy this lab.
 
 ---
 
