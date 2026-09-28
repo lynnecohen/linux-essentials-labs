@@ -1,19 +1,12 @@
 # Linux Essentials Labs
 
-Hands-on Linux learning with a defined **LPI Linux Essentials 010-160 Core track** and an optional **Level 2 practical Linux track**.
+Hands-on Linux learning for the **LPI Linux Essentials 010-160 Core curriculum**.
 
 Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, lynnecohen.com.
 
 ## Project status
 
-This repository has two separate completion tracks:
-
-- **Core — Linux Essentials 010-160:** **Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built. Learner testing may still prompt refinements, but Level 2 development does not affect Core completion.
-- **Level 2 — Practical Linux:** Expanding. This optional track continues beyond the certification core and can grow independently after the Core track is complete.
-
-Level 2 is a repository difficulty label. It does **not** mean LPI Linux Essentials version 2.0.
-
-The separation is intentional: future Level 2 additions should not make the completed Core curriculum appear unfinished.
+**Linux Essentials 010-160 Core: Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian. Learner testing may still prompt refinements, but the Core curriculum has a defined, complete finish line.
 
 ## Repository structure
 
@@ -24,14 +17,8 @@ The separation is intentional: future Level 2 additions should not make the comp
 04-inspection/    Core Lab 4 — System & Network Inspection
 05-bash/          Core Lab 5 — Bash Automation
 06-capstone/      Core Lab 6 — Capstone
-review/                  Core knowledge-review material
-
-level-2/
-  README.md              Level 2 roadmap and scope
-  03-bash/               Level 2 Lab 3 — Practical Bash Administration
+review/           Core knowledge-review material
 ```
-
-Only built modules contain full learner materials and working lab infrastructure. Planned Level 2 modules are documented in `level-2/README.md` rather than represented by placeholder directories.
 
 ## Getting a Linux system
 
@@ -129,12 +116,6 @@ Currently built Core lab IDs are:
 6
 ```
 
-Level 2 uses an explicit track prefix so its numbering cannot be confused with the Core sequence. The currently built Level 2 module is:
-
-```bash
-bash setup.sh l2-3
-```
-
 Each built lab uses clearly separated learner materials:
 
 ```text
@@ -155,7 +136,6 @@ Examples:
 
 ```bash
 bash check.sh 4
-bash check.sh l2-3
 ```
 
 To rebuild one generated workspace from scratch:
@@ -186,33 +166,14 @@ The sequence is:
 
 The Capstone is the practical endpoint. The Knowledge Review closes objective coverage that is better tested by recognition and recall than by artificial hands-on exercises. Together, they complete the Core track.
 
-## Level 2 — Practical Linux
-
-The optional `level-2/` track extends the Core curriculum into practical Linux administration.
-
-Its modules may include material that was deliberately excluded from the 010-160 Core because it was lower priority for that exam, material from newer objectives, and practical administration skills that are valuable beyond Linux Essentials.
-
-The first built Level 2 module is:
-
-```text
-level-2/03-bash/    Practical Bash Administration
-```
-
-Its topics include conditionals, tests, `while`, `case`, functions, command substitution, arithmetic expansion, interactive prompts, richer positional-argument handling, and meaningful exit statuses.
-
-See `level-2/README.md` for the Level 2 roadmap.
 
 ## Scope rule
 
 Core Labs 1–6 and the Core Knowledge Review are gated to **Linux Essentials v1.6 / 010-160** scope, with limited high-value reinforcement where needed for the current course.
 
-Level 2 is deliberately broader. Every Level 2 module should identify its own scope rather than implying that all of its content is required for 010-160.
-
 ## Repository workflow
 
-The Core track has a defined finish line and is now content-complete: Core Labs 1–6 plus the Knowledge Review are built. It can remain stable and releasable even while Level 2 continues to expand.
-
-Level 2 is therefore additive rather than a blocker for a stable Core release.
+The Core track has a defined finish line and is complete: Core Labs 1–6 plus the Knowledge Review are built and runtime-tested.
 
 Use `PROGRESS.md` as a lightweight checkpoint after a lab so later exercises can be tuned around what was automatic versus what still required recall support.
 
