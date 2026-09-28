@@ -96,7 +96,7 @@ Search **recursively** through all files under `logs/` for lines containing `err
 
 Exclude lines marked `DEBUG`.
 
-Include the source filename and original line number for every retained match.
+Include the source filename and original line number for every retained match. Work from the capstone workspace root so the recorded filenames begin with `logs/`, not an absolute path or `./logs/`.
 
 Sort the completed lines alphabetically and save them as:
 
@@ -161,10 +161,13 @@ Use the host Linux system for a short read-only inspection. Determine how you wo
 - a process snapshot
 - a live process view
 - memory usage
+- kernel messages
 - interface addresses
 - the routing table/default gateway
 - a basic DNS lookup
 - sockets
+- the local static hostname-mapping file
+- the resolver/DNS configuration file
 - currently logged-in users
 - what logged-in users are doing
 - recent login history
@@ -183,16 +186,19 @@ with exactly these keys, filling in the command or command form that belongs aft
 process-snapshot=
 process-live=
 memory=
+kernel-messages=
 addresses=
 routes=
 dns=
 sockets=
+hosts-file=
+resolver-file=
 current-users=
 user-activity=
 login-history=
 ```
 
-Use the modern Linux command forms emphasized in the Core labs where a modern/legacy distinction exists.
+Use the full modern Linux command forms emphasized in the Core labs where a modern/legacy distinction exists; do not substitute shorthand forms in this map.
 
 Also save your current identity information—the output that includes your UID, GID, and group memberships—as:
 
@@ -316,12 +322,14 @@ Complete these **after** the practical work, without looking back at prior labs 
 14. What modern commands show interface addresses and routes?
 15. Which basic DNS lookup command was emphasized for Linux Essentials v1.6?
 16. What modern socket-inspection command replaces much legacy `netstat` usage?
-17. Write the standard Bash shebang.
-18. State the ordinary shell-variable naming rules.
-19. What do `$1`, `$2`, and `$?` represent?
-20. Why can `bash script.sh` work when `./script.sh` fails with a permission error?
-21. Write a basic `for ... do ... done` loop from memory.
-22. What exit status conventionally means success?
+17. What command displays kernel messages, and which files hold local hostname mappings and resolver configuration?
+18. What legacy Linux interface command is associated with `ip addr show`, and why is Windows `ipconfig` not the answer?
+19. Write the standard Bash shebang.
+20. State the ordinary shell-variable naming rules.
+21. What do `$1`, `$2`, and `$?` represent?
+22. Why can `bash script.sh` work when `./script.sh` fails with a permission error?
+23. Write a basic `for ... do ... done` loop from memory.
+24. What exit status conventionally means success?
 
 ## Completion point
 
