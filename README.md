@@ -1,12 +1,15 @@
 # Linux Essentials Labs
 
-Hands-on Linux learning for the **LPI Linux Essentials 010-160 Core curriculum**.
+Hands-on Linux learning with a complete **LPI Linux Essentials 010-160 Core curriculum** and an optional **Level B — Practical Linux** continuation.
 
 Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, lynnecohen.com.
 
 ## Project status
 
-**Linux Essentials 010-160 Core v1.0: Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian. Learner testing may still prompt refinements, but the Core curriculum has a defined, complete finish line.
+- **Linux Essentials 010-160 Core v1.0:** **Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian.
+- **Level B — Practical Linux:** Expanding. This optional tier extends the Core into broader Linux administration. B3 is currently built; the remaining modules are documented in the Level B roadmap.
+
+**Level B is a repository learning tier, not an LPI exam-version label.** It can continue expanding without changing the completion status of Core v1.0.
 
 ## Repository structure
 
@@ -18,6 +21,10 @@ Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, l
 05-bash/          Core Lab 5 — Bash Automation
 06-capstone/      Core Lab 6 — Capstone
 review/           Core knowledge-review material
+
+level-b/
+  README.md        Level B roadmap and scope
+  03-bash/         B3 — Practical Bash Administration
 ```
 
 ## Getting a Linux system
@@ -116,6 +123,18 @@ Currently built Core lab IDs are:
 6
 ```
 
+The currently built Level B lab ID is:
+
+```text
+b3
+```
+
+For example:
+
+```bash
+bash setup.sh b3
+```
+
 Each built lab uses clearly separated learner materials:
 
 ```text
@@ -136,6 +155,7 @@ Examples:
 
 ```bash
 bash check.sh 4
+bash check.sh b3
 ```
 
 To rebuild one generated workspace from scratch:
@@ -166,14 +186,36 @@ The sequence is:
 
 The Capstone is the practical endpoint. The Knowledge Review closes objective coverage that is better tested by recognition and recall than by artificial hands-on exercises. Together, they complete the Core track.
 
+## Level B — Practical Linux
+
+The optional `level-b/` track builds on the completed Core curriculum and moves into broader practical Linux administration.
+
+The planned sequence is:
+
+1. **B1 — Command Discovery & Self-Service Troubleshooting**
+2. **B2 — File Discovery & Advanced Text Processing**
+3. **B3 — Practical Bash Administration** — built
+4. **B4 — Package Management**
+5. **B5 — Services & Logging**
+6. **B6 — SSH & Remote Administration**
+7. **B7 — Storage & Filesystems**
+8. **B8 — Advanced Users & Permissions**
+
+B1 and B2 intentionally precede B3 in the curriculum design: learners first become more self-sufficient at discovering commands and manipulating files/text, then automate richer administration workflows with Bash.
+
+See `level-b/README.md` for status, scope, and the complete roadmap.
 
 ## Scope rule
 
 Core Labs 1–6 and the Core Knowledge Review are gated to **Linux Essentials v1.6 / 010-160** scope, with limited high-value reinforcement where needed for the current course.
 
+Level B is deliberately broader. Content in Level B should not be assumed to be required for Linux Essentials 010-160.
+
 ## Repository workflow
 
-The Core track has a defined finish line and is complete: Core Labs 1–6 plus the Knowledge Review are built and runtime-tested.
+Core v1.0 is the stable certification-prep baseline: Core Labs 1–6 plus the Knowledge Review are built and runtime-tested.
+
+Level B is additive. New Level B modules can be developed on `main` without making the Core curriculum appear unfinished.
 
 Use `PROGRESS.md` as a lightweight checkpoint after a lab so later exercises can be tuned around what was automatic versus what still required recall support.
 
