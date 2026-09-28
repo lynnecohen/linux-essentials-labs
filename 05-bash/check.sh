@@ -54,16 +54,19 @@ else
     fail "add at least one ordinary comment after the shebang"
 fi
 
-if grep -Eq '\$1([^0-9]|$)' "$SCRIPT" && grep -Eq '\$2([^0-9]|$)' "$SCRIPT"; then
-    pass "first and second positional arguments used"
+if grep -Eq '^[[:space:]]*[A-Za-z_][A-Za-z0-9_]*=.*\$1([^0-9]|$)' "$SCRIPT" &&
+   grep -Eq '^[[:space:]]*[A-Za-z_][A-Za-z0-9_]*=.*\$2([^0-9]|$)' "$SCRIPT"; then
+    pass "positional arguments assigned to named variables"
 else
-    fail "script should use both $1 and $2"
+    fail "script should assign both $1 and $2 to named variables near the beginning"
 fi
 
-if grep -Eq '^[[:space:]]*for[[:space:]]+[A-Za-z_][A-Za-z0-9_]*[[:space:]]+in[[:space:]]+' "$SCRIPT" &&    grep -Eq '^[[:space:]]*do([[:space:]]|$)' "$SCRIPT" &&    grep -Eq '^[[:space:]]*done([[:space:]]|$)' "$SCRIPT"; then
-    pass "basic for/do/done loop"
+if grep -Eq '^[[:space:]]*for[[:space:]]+[A-Za-z_][A-Za-z0-9_]*[[:space:]]+in[[:space:]]+logs/\*\.log([[:space:]]|$)' "$SCRIPT" &&
+   grep -Eq '^[[:space:]]*do([[:space:]]|$)' "$SCRIPT" &&
+   grep -Eq '^[[:space:]]*done([[:space:]]|$)' "$SCRIPT"; then
+    pass "basic for/do/done loop over logs/*.log"
 else
-    fail "script should contain a basic for/do/done loop"
+    fail "script should contain a basic for/do/done loop over logs/*.log"
 fi
 
 if grep -Fq '$?' "$SCRIPT"; then
@@ -139,10 +142,13 @@ else
     fail "report should contain both grep-status=0 and grep-status=1"
 fi
 
-if [[ -f "$CHECK_OUTPUT" ]] &&    grep -Eiq 'error' "$CHECK_OUTPUT"; then
-    pass "case-insensitive error matches included"
+if [[ -f "$CHECK_OUTPUT" ]] &&
+   grep -Fq 'ERROR failed to load recommendation widget' "$CHECK_OUTPUT" &&
+   grep -Fq 'Error profile image service returned timeout' "$CHECK_OUTPUT" &&
+   grep -Fq 'ERROR background export failed' "$CHECK_OUTPUT"; then
+    pass "all case-insensitive error matches included"
 else
-    fail "report does not appear to contain the expected error matches"
+    fail "report is missing one or more expected case-insensitive error matches"
 fi
 
 rm -f "$CHECK_OUTPUT"
