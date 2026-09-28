@@ -254,7 +254,7 @@ echo "Result: $pass_count passed, $fail_count failed"
 
 if [[ $fail_count -eq 0 ]]; then
     echo "All scored Core Lab 6 capstone outcomes are correct."
-    echo "Finish the exact-recall checkpoint in 06-capstone/INSTRUCTIONS.md."
+    echo "Finish the exact-recall checkpoint in 06-capstone/INSTRUCTIONS.md, then check 06-capstone/ANSWERS.md."
     exit 0
 else
     echo "One or more capstone outcomes need another look."
