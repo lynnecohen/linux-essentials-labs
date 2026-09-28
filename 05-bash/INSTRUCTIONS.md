@@ -299,6 +299,8 @@ Complete these without looking back at the reading if possible.
 15. Name two terminal text editors recognized in this lab.
 16. Which of these is part of this lab's required scripting scope: `for`, `if`, `while`, or functions?
 
+After attempting all sixteen questions from memory, compare your responses with **[Lab 5 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
-After the practical and exact-recall checkpoint, note any syntax that required a lookup. The next required exercise is the cumulative capstone, so any remaining weak distinctions from Labs 1–5 should be carried into that scenario rather than expanded into new out-of-scope Bash material.
+Before moving to the Capstone, note any Bash syntax that still required a lookup. Revisit only those Core concepts, then continue to Lab 6.
