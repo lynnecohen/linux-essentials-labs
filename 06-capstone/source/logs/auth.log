@@ -1,0 +1,5 @@
+2026-09-27T18:00:22 INFO login user=alice
+2026-09-27T18:00:51 Error invalid token user=bob
+2026-09-27T18:01:37 INFO login user=dana
+2026-09-27T18:02:12 WARN timeout contacting directory
+2026-09-27T18:03:44 INFO token cache refreshed
