@@ -35,7 +35,7 @@ The reading intentionally teaches the tools without giving the required Lab 1 ar
 From the repository root, run:
 
 ```bash
-bash setup.sh
+bash setup.sh 1
 ```
 
 Then work from:
@@ -221,6 +221,8 @@ Do this **after** the practical tasks, without looking back at previous answers 
 7. Explain when `>` and `>>` behave differently.
 8. Explain what `2>` redirects.
 
+After attempting all eight questions from memory, compare your responses with **[Lab 1 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
-When this lab is complete, do **not** move directly into a prebuilt Lab 2. Review what was automatic, what required looking something up, and what you got wrong. Lab 2 will be tuned around that evidence.
+Before moving to Lab 2, note any commands or distinctions that still required a lookup. Revisit only those items, then continue with the next Core lab.
