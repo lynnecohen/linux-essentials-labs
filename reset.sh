@@ -26,8 +26,8 @@ case "$LAB" in
         echo "Core Lab 2 reset to its starting state."
         ;;
     3|03|users|permissions)
-        WORK="$ROOT_DIR/03-files/work"
-        SOURCE="$ROOT_DIR/03-files/source"
+        WORK="$ROOT_DIR/03-permissions/work"
+        SOURCE="$ROOT_DIR/03-permissions/source"
         rm -rf "$WORK"
         mkdir -p "$WORK"
         cp -a "$SOURCE/." "$WORK/"
@@ -63,6 +63,34 @@ case "$LAB" in
         chmod 0644 "$WORK/logs/"*.log
         echo "Core Lab 5 reset to its starting state."
         ;;
+    6|06|capstone)
+        WORK="$ROOT_DIR/06-capstone/work"
+        SOURCE="$ROOT_DIR/06-capstone/source"
+        rm -rf "$WORK"
+        mkdir -p "$WORK"
+        cp -a "$SOURCE/." "$WORK/"
+        mkdir -p "$WORK/backups" "$WORK/restore" "$WORK/results" "$WORK/scripts"
+
+        rm -f "$WORK/releases/current"
+        ln -s 2026.09.99 "$WORK/releases/current"
+
+        chmod 0644 "$WORK/files/healthcheck.sh"
+        chmod 0644 "$WORK/files/deploy.key"
+        chmod 0777 "$WORK/files/shared-drop"
+        chmod 0644 "$WORK/files/shared-drop/README.txt"
+
+        SEED="$WORK/.config-seed"
+        mkdir -p "$SEED/config"
+        cat > "$SEED/config/portal.conf" <<'EOF'
+environment=production
+api_host=api-prod.internal
+log_level=info
+EOF
+        tar -czf "$WORK/backups/config.tar.gz" -C "$SEED" config/portal.conf
+        rm -rf "$SEED"
+
+        echo "Core Lab 6 reset to its starting state."
+        ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
         WORK="$ROOT_DIR/level-2/03-bash/work"
         SOURCE="$ROOT_DIR/level-2/03-bash/source"
@@ -74,7 +102,7 @@ case "$LAB" in
         echo "Level 2 Lab 3 reset to its starting state."
         ;;
     *)
-        echo "Built Core labs: 1, 2, 3, 4, 5."
+        echo "Built Core labs: 1, 2, 3, 4, 5, 6."
         echo "Built Level 2 labs: l2-3."
         exit 1
         ;;
