@@ -2,11 +2,11 @@
 
 ## Scenario
 
-The fictional **Northstar Learning Portal** has been reported as intermittently unreachable. Before changing anything, you have been asked to collect a compact **read-only system-inspection packet** from Prometheus: process state, memory state, interface addressing, routes, sockets, and resolver configuration.
+The fictional **Northstar Learning Portal** has been reported as intermittently unreachable. Before changing anything, you have been asked to collect a compact **read-only system-inspection packet** from the host Linux system: process state, memory state, interface addressing, routes, sockets, and resolver configuration.
 
-The purpose of this lab is not to diagnose a real Prometheus outage. It is to practice choosing the correct Linux inspection command and interpreting the kind of information it returns.
+The purpose of this lab is not to diagnose a real outage. It is to practice choosing the correct Linux inspection command and interpreting the kind of information it returns.
 
-Lab 3 showed that ordinary permission arithmetic, symbolic `chmod`, account-file mapping, and `id` are now comfortable. Sticky-bit semantics, `who`/`w`/`last`, and login-shell distinctions were clarified and will recur only incidentally. Lab 4 now shifts deliberate practice to system and networking inspection.
+Skills from Lab 3 may recur incidentally, but Lab 4 shifts deliberate practice toward system and networking inspection.
 
 ## Primary practice targets
 
@@ -41,7 +41,7 @@ Then work from:
 04-inspection/work/
 ```
 
-This lab intentionally reads real Prometheus state. The generated work directory is primarily a place to store your results.
+This lab intentionally reads real state from the host Linux system. The generated work directory is primarily a place to store your results.
 
 No task in this lab asks you to change network configuration, terminate processes, mount filesystems, or modify system files.
 
@@ -160,7 +160,7 @@ In the output, identify:
 - the loopback interface
 - at least one `inet` IPv4 line
 - any `inet6` IPv6 lines that are present
-- the interface Prometheus appears to use for normal network connectivity
+- the interface the host system appears to use for normal network connectivity
 
 Do not use Windows `ipconfig` syntax.
 
@@ -208,7 +208,7 @@ If it is available, use it to look up:
 example.com
 ```
 
-If Prometheus does not have `host`, do **not** install packages solely for this lab. Practice the exact command from memory instead. You may also try it in **WebTerm Free Play** if that sandbox exposes the command.
+If the host system does not have `host`, do **not** install packages solely for this lab. Practice the exact command from memory instead. A disposable Linux sandbox may also be used for this one command if desired.
 
 This task is not scored because availability depends on the environment.
 
@@ -266,7 +266,7 @@ Do not edit either system file.
 
 ## Part F — Modern/legacy command recognition
 
-Legacy networking utilities may not be installed on Prometheus. Do not install them solely for this lab.
+Legacy networking utilities may not be installed on the host system. Do not install them solely for this lab.
 
 Run these only to see whether the executable exists:
 
@@ -312,7 +312,7 @@ From the repository root:
 bash check.sh 4
 ```
 
-The checker validates the output packet and recognition files using broad patterns rather than expecting Prometheus to have a specific IP address, UID, route, or socket state.
+The checker validates the output packet and recognition files using broad patterns rather than expecting the host system to have a specific IP address, UID, route, or socket state.
 
 If you want to rebuild the generated workspace:
 
@@ -343,6 +343,8 @@ Do this after the practical work without looking back at the reading if possible
 15. Why are `ip addr show` and `ip route show` answering different networking questions?
 16. Briefly distinguish `free` from `df`.
 
+After attempting all sixteen questions from memory, compare your responses with **[Lab 4 Exact-Recall Answer Key](ANSWERS.md)**.
+
 ## Stop point
 
-When the practical work and recall checkpoint are complete, review what was automatic and what required a lookup. Lab 5 will use that evidence and shift deliberate practice toward the Linux Essentials v1.6 Bash scripting core.
+Before moving to Lab 5, note any system-path, networking, DNS, or legacy-command associations that still required a lookup. Revisit only those items, then continue with the next Core lab.
