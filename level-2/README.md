@@ -80,7 +80,9 @@ generated work/
         ↓
 check.sh
         ↓
-exact-recall / reflection
+exact-recall checkpoint
+        ↓
+ANSWERS.md / reflection
 ```
 
 Labs should remain scenario-based, non-destructive where possible, and explicit about which work is performed against generated fixtures versus the host Linux system.
