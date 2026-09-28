@@ -1,0 +1,7 @@
+username,department,status,email
+alice,support,active,alice@example.test
+bob,engineering,active,bob@example.test
+carol,support,inactive,carol@example.test
+dana,support,active,dana@example.test
+erin,operations,active,erin@example.test
+frank,support,active,frank@example.test
