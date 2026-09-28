@@ -36,7 +36,7 @@ Avoid changing unrelated files just because they look unusual.
 
 Everything required here is drawn from Core Labs 1–5 and Linux Essentials 010-160 material already practiced in this repository.
 
-You do **not** need Level 2 Bash constructs such as:
+You do **not** need post-Core Bash constructs such as:
 
 ```text
 if / elif / else
