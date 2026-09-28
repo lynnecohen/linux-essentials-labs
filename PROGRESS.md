@@ -4,8 +4,6 @@ Use this as an optional lightweight checkpoint after each lab. The purpose is to
 
 This file is a **learner template**. Replace the blank prompts with your own notes if you want to track progress.
 
-The **Core** track and **Level 2** track are separate. Completing or expanding Level 2 does not change the completion status of the Core Linux Essentials sequence.
-
 # Core Track
 
 ## Lab 1 — Production Incident Investigation
@@ -170,38 +168,3 @@ The **Core** track and **Level 2** track are separate. Completing or expanding L
 
 -
 
----
-
-# Level 2 — Practical Linux
-
-## Lab 3 — Practical Bash Administration
-
-**Completed:**
-
-**Conditionals/tests that felt automatic:**
-
--
-
-**Looping/parsing syntax that required a lookup:**
-
--
-
-**Functions and return/exit behavior:**
-
--
-
-**Command substitution and arithmetic expansion:**
-
--
-
-**Argument handling (`$#`, `"$@"`, `shift`):**
-
--
-
-**Exact-recall questions missed:**
-
--
-
-**Items to revisit in later Level 2 work:**
-
--
