@@ -8,7 +8,7 @@ Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, l
 
 This repository has two separate completion tracks:
 
-- **Core — Linux Essentials 010-160:** In development. Core Labs 1–6, including the Capstone, are built. The Knowledge Review is the remaining planned piece before the Core track is considered complete.
+- **Core — Linux Essentials 010-160:** **Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built. Learner testing may still prompt refinements, but Level 2 development does not affect Core completion.
 - **Level 2 — Practical Linux:** Expanding. This optional track continues beyond the certification core and can grow independently after the Core track is complete.
 
 Level 2 is a repository difficulty label. It does **not** mean LPI Linux Essentials version 2.0.
@@ -181,7 +181,7 @@ The sequence is:
 6. **Capstone** — independent diagnosis, tool selection, remediation, and verification across prior labs
 7. **Knowledge Review** — non-lab objectives and recognition material that do not justify a full terminal scenario
 
-The Capstone is the practical endpoint and is now built. The Knowledge Review closes remaining objective coverage that is better tested by recognition and recall than by artificial hands-on exercises.
+The Capstone is the practical endpoint. The Knowledge Review closes objective coverage that is better tested by recognition and recall than by artificial hands-on exercises. Together, they complete the Core track.
 
 ## Level 2 — Practical Linux
 
@@ -207,7 +207,7 @@ Level 2 is deliberately broader. Every Level 2 module should identify its own sc
 
 ## Repository workflow
 
-The Core track has a defined finish line. Once Core Lab 6 and the Core Knowledge Review are complete and tested, the Core track can be marked complete and released even if Level 2 continues to expand.
+The Core track has a defined finish line and is now content-complete: Core Labs 1–6 plus the Knowledge Review are built. It can remain stable and releasable even while Level 2 continues to expand.
 
 Level 2 is therefore additive rather than a blocker for a stable Core release.
 
