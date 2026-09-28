@@ -139,8 +139,11 @@ Each built lab uses clearly separated learner materials:
 
 ```text
 PRE_READING.md    concept preparation
-INSTRUCTIONS.md   hands-on exercise
+INSTRUCTIONS.md   hands-on exercise and exact-recall checkpoint
+ANSWERS.md        answer key for the end-of-lab recall questions
 ```
+
+Attempt the exact-recall checkpoint before opening `ANSWERS.md`.
 
 When you finish a lab, run the checker for **that lab only**:
 
