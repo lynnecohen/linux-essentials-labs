@@ -455,7 +455,7 @@ A regular expression describes text patterns for tools such as `grep`.
 
 Do not transfer the meaning of `*`, `?`, or brackets blindly between the two systems.
 
-For regular expressions, retain the basic concepts from the Core text-processing material, including `.` as a pattern character with special meaning, bracket expressions such as `[abc]`, repetition with `*`, and the pattern behavior practiced in the labs.
+For regular expressions, retain the basic concepts from the Core text-processing material, including `.` as a pattern character with special meaning, bracket expressions such as `[abc]`, repetition with `*`, and `?` as **zero or one of the preceding pattern** in an extended regular expression. Do not confuse regex `?` with shell-glob `?`, which represents exactly one filename character.
 
 ## 3.3 Turning commands into a script
 
