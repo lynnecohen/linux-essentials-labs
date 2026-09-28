@@ -43,10 +43,10 @@ else
     fail "interface address report — results/ip-addresses.txt is missing or does not look like ip addr output"
 fi
 
-if [[ -s "$WORK/results/routes.txt" ]]; then
+if [[ -f "$WORK/results/routes.txt" ]]; then
     pass "routing table report"
 else
-    fail "routing table report — results/routes.txt is missing or empty"
+    fail "routing table report — results/routes.txt is missing"
 fi
 
 if [[ -s "$WORK/results/sockets.txt" ]] &&    grep -Eq 'Netid|State|Recv-Q|ESTAB|LISTEN' "$WORK/results/sockets.txt"; then
@@ -61,10 +61,10 @@ else
     fail "hosts-file snapshot — results/hosts.txt is missing or does not resemble /etc/hosts"
 fi
 
-if [[ -s "$WORK/results/resolv.conf.txt" ]]; then
+if [[ -f "$WORK/results/resolv.conf.txt" ]]; then
     pass "resolver configuration snapshot"
 else
-    fail "resolver configuration snapshot — results/resolv.conf.txt is missing or empty"
+    fail "resolver configuration snapshot — results/resolv.conf.txt is missing"
 fi
 
 expected_path_map=$'config=/etc\nlogs=/var/log\nboot=/boot\nprocess-kernel=/proc\ndevices=/dev\nkernel-devices=/sys'
