@@ -25,6 +25,10 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/05-bash/work"
         echo "Core Lab 5 generated workspace removed."
         ;;
+    6|06|capstone)
+        rm -rf "$ROOT_DIR/06-capstone/work"
+        echo "Core Lab 6 generated workspace removed."
+        ;;
     l2-3|level2-3|level-2-3|advanced|advanced-scripting|7|07)
         rm -rf "$ROOT_DIR/level-2/03-bash/work"
         # Remove a generated workspace left by the pre-Level-2 layout, if present.
@@ -32,7 +36,7 @@ case "$LAB" in
         echo "Level 2 Lab 3 generated workspace removed."
         ;;
     *)
-        echo "Built Core labs: 1, 2, 3, 4, 5."
+        echo "Built Core labs: 1, 2, 3, 4, 5, 6."
         echo "Built Level 2 labs: l2-3."
         exit 1
         ;;
