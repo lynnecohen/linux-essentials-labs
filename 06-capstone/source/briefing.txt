@@ -18,7 +18,7 @@ Incident packet:
 - Report the three slowest response-time values.
 
 System handoff:
-- Leave a compact map of the Linux commands used for basic process, memory, network, DNS, socket, and session inspection.
+- Leave a compact map of the Linux commands and files used for basic process, memory, kernel, network, DNS, socket, and session inspection.
 - Save current UID/GID/group information.
 
 Automation:
