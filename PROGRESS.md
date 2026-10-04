@@ -172,6 +172,32 @@ This file is a **learner template**. Replace the blank prompts with your own not
 
 # Level B — Practical Linux
 
+## B1 — Command Discovery & Self-Service Troubleshooting
+
+**Completed:**
+
+**Documentation/discovery tools that felt automatic:**
+
+-
+
+**Command-resolution or PATH concepts that required a lookup:**
+
+-
+
+**Shell-history or OLDPWD behavior that required a lookup:**
+
+-
+
+**Exact-recall questions missed:**
+
+-
+
+**Items to revisit in later Level B work:**
+
+-
+
+---
+
 ## B3 — Practical Bash Administration
 
 **Completed:**
