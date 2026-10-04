@@ -1,0 +1,8 @@
+Northstar administrator notes
+
+- Recover an ls option for human-readable sizes.
+- Determine what grep -c counts.
+- Find documentation related to networking without assuming the command name.
+- Distinguish passwd the command from the passwd file format.
+- Determine why northstar-status cannot initially be invoked by bare name.
+- Identify what Bash will execute for cd, bash, and ls.
