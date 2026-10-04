@@ -10,7 +10,7 @@ The Core track remains the stable certification-prep sequence. Level B is option
 
 | Module | Status | Focus |
 |---|---:|---|
-| **B1 — Command Discovery & Self-Service Troubleshooting** | Planned | documentation and help systems, shell history, command resolution, environment/PATH, locating commands, and independent troubleshooting workflow |
+| **B1 — Command Discovery & Self-Service Troubleshooting** | **Built** | documentation and help systems, shell history, command resolution, environment/PATH, locating commands, and independent troubleshooting workflow |
 | **B2 — File Discovery, Advanced Text Processing & I/O** | Planned | `find`; advanced `grep`; `cut`, `sort`, `uniq`, `wc`; pipelines; stdout/stderr; file descriptors; advanced redirection; practical text-processing extensions |
 | **B3 — Practical Bash Administration** | **Built** | conditionals, tests, loops, functions, parsing, argument handling, command substitution, arithmetic, exit codes |
 | **B4 — Package Management** | Planned | practical Debian-family package/repository work with recognition of other major package ecosystems |
@@ -99,7 +99,34 @@ Avoid duplicating complete Core labs merely because Level B revisits a command. 
 
 For example, archive handling should be reinforced incidentally when a realistic task calls for it rather than receiving another dedicated `tar` lab.
 
-## Built module
+## Built modules
+
+### B1 — Command Discovery & Self-Service Troubleshooting
+
+Path:
+
+```text
+level-b/01-discovery/
+```
+
+Set up from the repository root:
+
+```bash
+bash setup.sh b1
+```
+
+Then read:
+
+```text
+level-b/01-discovery/PRE_READING.md
+level-b/01-discovery/INSTRUCTIONS.md
+```
+
+Check completed work with:
+
+```bash
+bash check.sh b1
+```
 
 ### B3 — Practical Bash Administration
 
