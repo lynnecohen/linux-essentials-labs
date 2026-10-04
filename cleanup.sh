@@ -29,14 +29,18 @@ case "$LAB" in
         rm -rf "$ROOT_DIR/06-capstone/work"
         echo "Core Lab 6 generated workspace removed."
         ;;
+    b1|B1)
+        rm -rf "$ROOT_DIR/level-b/01-discovery/work"
+        echo "B1 generated workspace removed."
+        ;;
     b3|B3)
         rm -rf "$ROOT_DIR/level-b/03-bash/work"
         echo "B3 generated workspace removed."
         ;;
     *)
         echo "Built Core labs: 1, 2, 3, 4, 5, 6."
-        echo "Built Level B labs: b3."
-        echo "Usage: bash cleanup.sh 1|2|3|4|5|6|b3"
+        echo "Built Level B labs: b1, b3."
+        echo "Usage: bash cleanup.sh 1|2|3|4|5|6|b1|b3"
         exit 1
         ;;
 esac
