@@ -1,0 +1,2 @@
+#!/bin/bash
+printf '%s\n' 'northstar-status: portal maintenance helper available'
