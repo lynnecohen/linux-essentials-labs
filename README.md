@@ -7,7 +7,7 @@ Created by **OpenAI GPT-5.6 Sol** with prompting & testing by **Lynne Cohen**, l
 ## Project status
 
 - **Linux Essentials 010-160 Core v1.0:** **Complete.** Core Labs 1–6, the Capstone, and the Knowledge Review are built and runtime-tested on Debian.
-- **Level B — Practical Linux:** Expanding. This optional tier extends the Core into broader Linux administration. B3 is currently built; the remaining modules are documented in the Level B roadmap.
+- **Level B — Practical Linux:** Expanding. This optional tier extends the Core into broader Linux administration. B1 and B3 are currently built; the remaining modules are documented in the Level B roadmap.
 
 **Level B is a repository learning tier, not an LPI exam-version label.** It can continue expanding without changing the completion status of Core v1.0.
 
@@ -24,6 +24,7 @@ review/           Core knowledge-review material
 
 level-b/
   README.md        Level B roadmap and scope
+  01-discovery/    B1 — Command Discovery & Self-Service Troubleshooting
   03-bash/         B3 — Practical Bash Administration
 ```
 
@@ -123,15 +124,17 @@ Currently built Core lab IDs are:
 6
 ```
 
-The currently built Level B lab ID is:
+The currently built Level B lab IDs are:
 
 ```text
+b1
 b3
 ```
 
 For example:
 
 ```bash
+bash setup.sh b1
 bash setup.sh b3
 ```
 
