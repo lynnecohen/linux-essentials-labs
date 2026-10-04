@@ -10,9 +10,17 @@ You have access to a fictional Northstar Learning Portal Linux server, but the p
 
 Read `PRE_READING.md` before starting.
 
-## Current setup status
+## Setup
 
-B1 automation is not wired yet. The eventual workspace will contain:
+From the repository root:
+
+    bash setup.sh b1
+
+Then work from:
+
+    level-b/01-discovery/work/
+
+The workspace contains:
 
     tools/northstar-status
     clues/admin-notes.txt
@@ -41,7 +49,7 @@ You should be able to explain why these four tools are not interchangeable.
 
 ## Part D — Diagnose a PATH problem
 
-The final wired lab will provide `tools/northstar-status` as an executable file.
+The workspace provides `tools/northstar-status` as an executable file.
 
 From the B1 workspace:
 
